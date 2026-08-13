@@ -115,7 +115,10 @@
   .cta.ghost { background: var(--surface); color: var(--ink); border: 1px solid #C7CDD3; }
   .cta.ghost:hover { border-color: var(--accent); color: var(--accent); }
 
-  header.site { background: var(--surface); border-bottom: 1px solid var(--rule); }
+  header.site { background: rgba(255,255,255,.92); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 50; }
+  html { scroll-behavior: smooth; }
+  section[id], div[id] { scroll-margin-top: 88px; }
   header.site .shell { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.2rem; padding-top: .95rem; padding-bottom: .95rem; }
   .wordmark { font-weight: 700; letter-spacing: -.015em; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
   .wordmark small { font-size: .6rem; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3); display: block; margin-top: .1rem; font-weight: 600; }
@@ -323,6 +326,12 @@
     .partner .lr { border-left: 0; border-top: 1px solid var(--rule); padding: 1.4rem 0 0; }
   }
   @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } .timeline { grid-template-columns: 1fr; } }
+  /* keep the sticky header compact on phones: logo + primary CTA only, no wrapping menu */
+  @media (max-width: 820px) {
+    header.site .shell { flex-wrap: nowrap; }
+    .nav a:not(.cta) { display: none; }
+    section[id], div[id] { scroll-margin-top: 104px; }
+  }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
