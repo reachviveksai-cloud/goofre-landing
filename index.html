@@ -29,7 +29,6 @@
   ═══════════════════════════════════════════════════════════════════════ -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex">
 <title>Goofre | Agentic Commerce Orchestrator™ for E-commerce Developers</title>
 <meta name="description" content="The website is losing shoppers to AI agents, and platforms are automating the rest. Goofre makes e-commerce developers into Agentic Commerce Orchestrators™: precision agentic-commerce readiness, storefront tooling and continuous orchestration. Join as an ACO™.">
 <link rel="canonical" href="https://goofre.com/">
@@ -125,8 +124,65 @@
   .nav a:hover { color: var(--ink); }
 
   .hero { padding: 4.5rem 0 3.5rem; }
-  .hero-sub { font-size: 1.08rem; max-width: 60ch; }
+  .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 3.2rem; align-items: center; }
+  .hero-sub { font-size: 1.08rem; max-width: 56ch; }
   .hero-note { font-size: .8rem; color: var(--ink-3); margin-top: 1rem; font-weight: 500; }
+  .hero-eyebrow { display: inline-flex; align-items: baseline; flex-wrap: wrap; gap: .5rem; font-size: .82rem;
+    font-weight: 700; color: var(--ink-3); margin: 0 0 1.1rem; letter-spacing: .005em; }
+  .hero-eyebrow b { color: var(--accent); letter-spacing: -.01em; }
+  .hero-eyebrow .ipa { font-weight: 600; color: var(--ink-2); font-style: normal; }
+  .hero-eyebrow .say { color: var(--ink-3); font-weight: 600; }
+
+  /* ── Hero centrepiece: the orchestration console. Goofre is the layer that
+       lifts developers ABOVE the platforms ("go free") to serve the agents. ── */
+  .orchestrator { margin: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 12px;
+    box-shadow: 0 1px 2px rgba(16,24,32,.05), 0 18px 40px -20px rgba(16,24,32,.28); overflow: hidden; }
+  .oc-bar { display: flex; align-items: center; gap: .6rem; padding: .68rem .9rem; background: var(--ground);
+    border-bottom: 1px solid var(--rule-2); }
+  .oc-bar .dots { display: flex; gap: .32rem; }
+  .oc-bar .dots i { width: .5rem; height: .5rem; border-radius: 50%; background: #D3D8DE; }
+  .oc-bar .t { font-size: .82rem; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+  .oc-bar .live { margin-left: auto; display: inline-flex; align-items: center; gap: .38rem; font-size: .68rem;
+    font-weight: 800; text-transform: uppercase; letter-spacing: .09em; color: var(--accent); }
+  .oc-bar .live i { width: .44rem; height: .44rem; border-radius: 50%; background: var(--accent);
+    animation: ocpulse 2.4s ease-out infinite; }
+  @keyframes ocpulse { 0% { box-shadow: 0 0 0 0 rgba(4,120,87,.5); } 70% { box-shadow: 0 0 0 6px rgba(4,120,87,0); }
+    100% { box-shadow: 0 0 0 0 rgba(4,120,87,0); } }
+
+  .oc-body { padding: 1.05rem 1.05rem 1.15rem; display: flex; flex-direction: column; gap: .5rem; }
+  .oc-plane .lbl { font-size: .64rem; font-weight: 800; text-transform: uppercase; letter-spacing: .1em;
+    color: var(--ink-3); display: block; margin: 0 0 .5rem; }
+  .oc-chips { display: flex; flex-wrap: wrap; gap: .38rem; }
+  .oc-chips .chip { font-size: .75rem; font-weight: 600; color: var(--ink-2); background: var(--surface);
+    border: 1px solid var(--rule); border-radius: 999px; padding: .26rem .68rem; }
+  .oc-platforms .chip { color: var(--ink-3); background: var(--rule-2); border-color: var(--rule); }
+  .oc-platforms .chip::before { content: ""; display: inline-block; width: .4rem; height: .4rem; border-radius: 50%;
+    background: #B7BEC6; margin-right: .4rem; vertical-align: middle; }
+
+  .oc-flow { display: flex; align-items: center; justify-content: center; gap: .5rem; padding: .1rem 0;
+    font-size: .68rem; font-weight: 700; color: var(--ink-3); }
+  .oc-flow.up svg { color: var(--accent); }
+  .oc-flow svg { width: 13px; height: 13px; flex: none; }
+
+  .oc-core { position: relative; background: var(--tint); border: 1.5px solid var(--accent); border-radius: 10px;
+    padding: .85rem .95rem .9rem; box-shadow: 0 12px 26px -14px rgba(4,120,87,.55); }
+  .oc-core .head { display: flex; align-items: center; justify-content: space-between; gap: .5rem; margin: 0 0 .7rem; }
+  .oc-core .name { font-size: .7rem; font-weight: 800; letter-spacing: .05em; color: var(--accent-hover); }
+  .oc-core .say { font-size: .66rem; font-weight: 800; color: #fff; background: var(--accent); border-radius: 999px;
+    padding: .16rem .6rem; white-space: nowrap; letter-spacing: .01em; }
+  .oc-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: .55rem; }
+  .oc-metrics b { display: block; font-size: 1.32rem; font-weight: 800; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+  .oc-metrics small { display: block; font-size: .64rem; color: var(--ink-2); font-weight: 700; margin-top: .24rem;
+    text-transform: uppercase; letter-spacing: .04em; }
+  .oc-core .foot { margin-top: .8rem; padding-top: .66rem; border-top: 1px dashed rgba(4,120,87,.4);
+    font-size: .76rem; font-weight: 700; color: var(--accent-hover); }
+  .hero-figcap { font-size: .82rem; color: var(--ink-3); margin: 1rem 0 0; line-height: 1.6; font-weight: 500; }
+
+  @media (max-width: 940px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 2.4rem; }
+    .hero-sub { max-width: 60ch; }
+    .orchestrator { max-width: 460px; }
+  }
 
   /* why-now: text + vertical diagram, side by side, vertically centred */
   .why-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: center; margin-top: 1.4rem; }
@@ -285,20 +341,89 @@
 <!-- ══════════════════ HERO ══════════════════ -->
 <div class="shell">
   <section class="hero" id="top">
-    <h1>Become what comes after the e&#8209;commerce developer.</h1>
-    <p class="hero-sub">
-      Shoppers are starting to ask agents instead of visiting stores. The storefront you have spent
-      a career perfecting is becoming a data source, and the platforms are automating what used to
-      be billable work. Squeezed from both sides, the role is not dying: <strong>it is moving up
-      the stack.</strong> Goofre™ makes e‑commerce developers into
-      <strong>Agentic Commerce Orchestrator™s™</strong>, the people who run commerce in the
-      agent era.
-    </p>
-    <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin:1.8rem 0 0;">
-      <a class="cta" href="#apply">Join as an ACO™</a>
-      <a class="cta ghost" href="#why">Why now</a>
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="hero-eyebrow">
+          <b>Goofre™</b> <span class="ipa">/ˈɡoʊ&nbsp;friː/</span>
+          <span class="say">— say &ldquo;go&nbsp;free&rdquo;</span>
+        </p>
+        <h1>Become what comes after the e&#8209;commerce developer.</h1>
+        <p class="hero-sub">
+          Shoppers are starting to ask agents instead of visiting stores. The storefront you have spent
+          a career perfecting is becoming a data source, and the platforms are automating what used to
+          be billable work. Squeezed from both sides, the role is not dying: <strong>it is moving up
+          the stack.</strong> Goofre™ makes e‑commerce developers into
+          <strong>Agentic Commerce Orchestrators™</strong>, the people who run commerce in the
+          agent era.
+        </p>
+        <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin:1.8rem 0 0;">
+          <a class="cta" href="#apply">Join as an ACO™</a>
+          <a class="cta ghost" href="#why">Why now</a>
+        </div>
+        <p class="hero-note">A first-of-its-kind orchestration layer.</p>
+      </div>
+
+      <div class="hero-figure">
+        <figure class="orchestrator"
+          aria-label="Goofre sits as an orchestration layer between commerce platforms below and AI shopping agents above: it reads every platform and publishes a store the agents can trust and buy from.">
+          <div class="oc-bar">
+            <span class="dots"><i></i><i></i><i></i></span>
+            <span class="t">Goofre™ Orchestrator</span>
+            <span class="live"><i></i>live</span>
+          </div>
+          <div class="oc-body">
+
+            <!-- demand: the agents now doing the shopping -->
+            <div class="oc-plane oc-agents">
+              <span class="lbl">AI shopping agents · the new buyers</span>
+              <div class="oc-chips">
+                <span class="chip">ChatGPT</span><span class="chip">Perplexity</span>
+                <span class="chip">Gemini</span><span class="chip">Amazon Rufus</span>
+              </div>
+            </div>
+
+            <div class="oc-flow up">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+              publishes a store agents can trust and buy from
+            </div>
+
+            <!-- the layer -->
+            <div class="oc-plane oc-core">
+              <div class="head">
+                <span class="name">GOOFRE — ORCHESTRATION LAYER</span>
+                <span class="say">go free</span>
+              </div>
+              <div class="oc-metrics">
+                <div><b>94</b><small>Readiness ↑</small></div>
+                <div><b>✓✓✓✓</b><small>Surfaces synced</small></div>
+                <div><b>ACO™</b><small>You, in control</small></div>
+              </div>
+              <div class="foot">Go free of platform lock‑in — orchestrate readiness directly, across every surface.</div>
+            </div>
+
+            <div class="oc-flow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>
+              reads and unifies every commerce surface
+            </div>
+
+            <!-- supply: the platforms you stop being locked into -->
+            <div class="oc-plane oc-platforms">
+              <span class="lbl">Commerce platforms · the commodity below</span>
+              <div class="oc-chips">
+                <span class="chip">Magento</span><span class="chip">Merchant Center</span>
+                <span class="chip">GA4</span><span class="chip">Search Console</span>
+              </div>
+            </div>
+
+          </div>
+        </figure>
+        <p class="hero-figcap">
+          Goofre is the layer between your commerce platforms and the agents now doing the shopping.
+          Say it <strong>&ldquo;go free&rdquo;</strong> — it lifts you above single‑platform lock‑in so you
+          orchestrate agentic‑commerce readiness directly, instead of waiting on any one platform to ship it.
+        </p>
+      </div>
     </div>
-    <p class="hero-note">A first-of-its-kind orchestration layer.</p>
   </section>
 
   <aside class="merchant-band">
