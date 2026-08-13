@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- ═══════════════════════════════════════════════════════════════════════
+  GOOFRE.COM · LANDING v5  (enterprise light · squeeze narrative · ACO)
+  2026-08-13. Editorial rules in force on this page:
+    · No em dashes anywhere in copy.
+    · Every ACO / Agentic Commerce Orchestrator instance carries ™.
+    · The audit is never quantified (no check counts, no factor lists).
+      Precision is conveyed by language and the high-level diagram; the full
+      factor set ships only inside audit reports.
+    · The squeeze narrative is supply-side only (never merchant-facing).
+
+  HANDOFF, fill before launch:
+    [ ] Application form posts to a PLACEHOLDER action. Wire to a real
+        endpoint (candidate: applicant-shaped variant of the public lead
+        route) and name the owner of the 3-working-day reply promise.
+    [ ] Footer: social links (LinkedIn / X / YouTube), Blog, About, Contact,
+        Privacy, Terms are placeholder hrefs. Point at real destinations.
+    [ ] Generate /sitemap.xml at launch and reference it in robots.txt.
+    [ ] og:image, 1200x630 at /assets/goofre-og.jpg.
+    [ ] Logic Rays links point at the github.io PREVIEW, swap to the real
+        logicrays.com path at launch.
+    [ ] Stats in section 02 are sourced Oct 2025 to Q1 2026. Refresh
+        quarterly; each figure carries its source inline.
+    [ ] index.html in this repo is the LIVE goofre.com. Replacing it with
+        this file is the deliberate launch step.
+    [ ] Preview deploys add <meta name="robots" content="noindex">.
+  ═══════════════════════════════════════════════════════════════════════ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Goofre | Agentic Commerce Orchestrator™ for E-commerce Developers</title>
+<meta name="description" content="The website is losing shoppers to AI agents, and platforms are automating the rest. Goofre makes e-commerce developers into Agentic Commerce Orchestrators™: precision agentic-commerce readiness, storefront tooling and continuous orchestration. Join as an ACO™.">
+<link rel="canonical" href="https://goofre.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Goofre">
+<meta property="og:title" content="Become what comes after the e-commerce developer.">
+<meta property="og:description" content="Squeezed between agents replacing storefronts and platforms automating projects, the role is moving up the stack. Goofre makes developers into Agentic Commerce Orchestrators™.">
+<meta property="og:url" content="https://goofre.com/">
+<meta property="og:image" content="https://goofre.com/assets/goofre-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Goofre",
+  "url": "https://goofre.com",
+  "description": "Goofre, the Agentic Commerce Orchestrator™. The platform and certification that make e-commerce developers into ACO™s: the professionals who ready stores for AI shopping agents and keep them ready."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Goofre",
+  "url": "https://goofre.com"
+}
+</script>
+</head>
+<body>
+
+<style>
+  /* ── Enterprise light system. Deep emerald, restrained neutrals, 1px
+       borders, small radii. No glows, no gradients, no dark-neon. ───────── */
+  :root {
+    --ground:  #F7F8F9;
+    --surface: #FFFFFF;
+    --ink:     #1A1F26;
+    --ink-2:   #46505B;
+    --ink-3:   #6E7780;
+    --rule:    #E2E5E9;
+    --rule-2:  #EDEFF2;
+    --accent:  #047857;
+    --accent-hover: #065F46;
+    --tint:    #E9F4EF;
+    --warn:    #92600A;
+    --font-sans: "Helvetica Neue", Helvetica, Arial, "Segoe UI", system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--ground); color: var(--ink-2);
+    font-family: var(--font-sans); font-size: 16px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .shell { max-width: 1120px; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 4.5rem 0 0; }
+
+  .eyebrow {
+    font-size: .7rem; letter-spacing: .13em; text-transform: uppercase;
+    color: var(--ink-3); font-weight: 700; margin: 0 0 .9rem;
+  }
+  h1 {
+    font-size: clamp(2rem, 4.8vw, 3.1rem); line-height: 1.08; letter-spacing: -.02em;
+    font-weight: 700; margin: 0 0 1.1rem; color: var(--ink); text-wrap: balance; max-width: 19ch;
+  }
+  h2 {
+    font-size: clamp(1.35rem, 2.8vw, 1.8rem); line-height: 1.2; letter-spacing: -.015em;
+    font-weight: 700; margin: 0 0 .8rem; color: var(--ink); text-wrap: balance; max-width: 32ch;
+  }
+  h3 { font-size: 1rem; font-weight: 700; color: var(--ink); margin: 0 0 .4rem; letter-spacing: -.005em; }
+  p { max-width: 68ch; margin: 0 0 1rem; }
+  strong { color: var(--ink); font-weight: 700; }
+  a { color: var(--accent); text-underline-offset: 2px; }
+  a:focus-visible, .cta:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  .cta {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: var(--accent); color: #fff; text-decoration: none;
+    font-weight: 600; font-size: .95rem; padding: .75rem 1.4rem; border-radius: 6px; border: 0; cursor: pointer;
+  }
+  .cta:hover { background: var(--accent-hover); }
+  .cta.ghost { background: var(--surface); color: var(--ink); border: 1px solid #C7CDD3; }
+  .cta.ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+  header.site { background: var(--surface); border-bottom: 1px solid var(--rule); }
+  header.site .shell { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem 1.2rem; padding-top: .95rem; padding-bottom: .95rem; }
+  .wordmark { font-weight: 700; letter-spacing: -.015em; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
+  .wordmark small { font-size: .6rem; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3); display: block; margin-top: .1rem; font-weight: 600; }
+  .nav { display: flex; gap: 1.5rem; align-items: center; font-size: .9rem; }
+  .nav a { color: var(--ink-2); text-decoration: none; font-weight: 500; }
+  .nav a:hover { color: var(--ink); }
+
+  .hero { padding: 4.5rem 0 3.5rem; }
+  .hero-sub { font-size: 1.08rem; max-width: 60ch; }
+  .hero-note { font-size: .8rem; color: var(--ink-3); margin-top: 1rem; font-weight: 500; }
+
+  /* why-now: text + vertical diagram, side by side, vertically centred */
+  .why-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 3rem; align-items: center; margin-top: 1.4rem; }
+  .why-copy p { max-width: none; }
+  .why-figure { margin-top: 0; }
+
+  .merchant-band {
+    display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;
+    background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--accent);
+    border-radius: 6px; padding: 1rem 1.3rem; margin: 0 0 1rem;
+  }
+  .merchant-band p { margin: 0; font-size: .9rem; max-width: 60ch; }
+  .merchant-band a { font-weight: 600; text-decoration: none; }
+  .merchant-band a:hover { text-decoration: underline; }
+
+  .panel { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.8rem; margin: 1.6rem 0 0; }
+  .panel svg { width: 100%; height: auto; display: block; }
+  .panel figcaption { font-size: .8rem; color: var(--ink-3); margin-top: 1rem; line-height: 1.6; max-width: 76ch; }
+  .d-label { font-family: var(--font-sans); font-size: 12px; fill: var(--ink-2); font-weight: 500; }
+  .d-label.strong { fill: var(--ink); font-weight: 700; }
+  .d-label.accent { fill: var(--accent); font-weight: 700; }
+  .d-label.dim { fill: var(--ink-3); font-size: 11px; }
+  .d-box { fill: var(--surface); stroke: #9AA4AF; stroke-width: 1.2; rx: 6; }
+  .d-box.accent { stroke: var(--accent); stroke-width: 1.6; fill: var(--tint); }
+  .d-box.inner { fill: #FFFFFF; stroke: #C7CDD3; rx: 5; }
+  .d-line { stroke: #9AA4AF; stroke-width: 1.2; fill: none; }
+  .d-line.accent { stroke: var(--accent); stroke-width: 1.6; }
+
+  /* thesis / climax statement: centred, deliberate, fills the centre of the width */
+  .pull {
+    text-align: center; max-width: 40ch; margin: 2.8rem auto 0;
+    font-size: clamp(1.4rem, 2.4vw, 1.7rem); line-height: 1.32; letter-spacing: -.015em;
+    color: var(--ink); font-weight: 700;
+  }
+  .pull::before { content: ""; display: block; width: 2.2rem; height: 3px; background: var(--accent); margin: 0 auto 1.1rem; }
+
+  /* stats */
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.6rem 0 0; }
+  .stat { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--accent); border-radius: 6px; padding: 1.2rem 1.25rem 1.05rem; }
+  .stat b { display: block; font-size: 2rem; font-weight: 700; letter-spacing: -.02em; color: var(--ink); line-height: 1.1; }
+  .stat span { display: block; font-size: .85rem; margin-top: .45rem; line-height: 1.5; }
+  .stat small { display: block; font-size: .72rem; color: var(--ink-3); margin-top: .6rem; font-weight: 600; }
+  /* horizontal timeline: 4 nodes on a rail, reading left to right */
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem; margin: 2.4rem 0 0; position: relative; }
+  .timeline::before { content: ""; position: absolute; top: 5px; left: 5px; right: 5px; height: 2px; background: var(--rule); }
+  .tl { position: relative; padding-top: 1.7rem; max-width: none; }
+  .tl::before { content: ""; position: absolute; left: 0; top: 0; width: .7rem; height: .7rem; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--ground); }
+  .tl b { display: block; color: var(--ink); font-weight: 700; font-size: .8rem; letter-spacing: .04em; margin-bottom: .3rem; }
+  .tl p { margin: 0; font-size: .88rem; }
+  .sources { font-size: .76rem; color: var(--ink-3); margin-top: 1.6rem; max-width: 76ch; }
+
+  .triad { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.6rem 0 0; }
+  .tcard { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.4rem 1.4rem 1.2rem; }
+  .tcard .tk { font-size: .68rem; letter-spacing: .11em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  .tcard h3 { margin: .55rem 0 .4rem; font-size: 1.05rem; }
+  .tcard p { font-size: .9rem; margin: 0; }
+
+  .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.6rem; }
+  .prin { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.3rem 1.4rem 1.1rem; }
+  .prin h3 { font-size: .95rem; color: var(--ink); margin-bottom: .45rem; }
+  .prin h3 { padding-left: .9rem; position: relative; }
+  .prin h3::before { content: ""; position: absolute; left: 0; top: .5em; width: .4rem; height: .4rem; background: var(--accent); border-radius: 1px; }
+  .prin p { font-size: .88rem; margin: 0; }
+
+  /* two-column split: explanatory prose left, highlighted statement right */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; margin: 2rem 0 0; align-items: stretch; }
+  .split .lead-eyebrow { font-size: .7rem; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin: 0 0 .6rem; }
+  .split-copy p { max-width: none; margin: 0; }
+  .statement-card { background: var(--tint); border: 1px solid var(--rule); border-radius: 8px; padding: 1.6rem 1.8rem; display: flex; flex-direction: column; justify-content: center; }
+  .statement-card .lead-eyebrow { color: var(--accent); }
+  .statement-card p { margin: 0; font-size: 1.08rem; font-weight: 700; color: var(--ink); max-width: none; line-height: 1.4; }
+
+  /* business model steps */
+  .model { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin: 1.6rem 0 0; }
+  .model-step { background: var(--surface); border: 1px solid var(--rule); border-radius: 8px; padding: 1.4rem 1.4rem 1.2rem; position: relative; }
+  .model-step .mn { font-size: 1.4rem; font-weight: 700; color: var(--tint); -webkit-text-stroke: 1px var(--accent); letter-spacing: -.02em; line-height: 1; display: block; }
+  .model-step h3 { margin: .7rem 0 .4rem; font-size: 1rem; }
+  .model-step p { font-size: .88rem; margin: 0; }
+
+  .partner { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 2.2rem; margin-top: 4.5rem; }
+  .partner .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2.2rem; align-items: center; }
+  .partner .founding { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--warn); font-weight: 700; }
+  .partner h2 { margin-top: .5rem; }
+  .partner .lr { border-left: 2px solid var(--rule); padding-left: 1.8rem; }
+  .partner .lr b { font-size: 1.2rem; font-weight: 700; color: var(--ink); display: block; }
+  .partner .lr p { font-size: .9rem; margin: .45rem 0 .9rem; }
+
+  .apply { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 2.2rem; margin-top: 1.8rem; max-width: 620px; }
+  .apply label { display: block; font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin: 1.1rem 0 .35rem; }
+  .apply input[type="text"], .apply input[type="email"], .apply input[type="url"], .apply textarea {
+    width: 100%; background: #FBFCFC; border: 1px solid #C7CDD3; border-radius: 6px;
+    color: var(--ink); font-family: var(--font-sans); font-size: .95rem; padding: .65rem .8rem; outline: none;
+  }
+  .apply input:focus, .apply textarea:focus { border-color: var(--accent); }
+  .apply textarea { min-height: 90px; resize: vertical; }
+  .whoami { display: flex; gap: .6rem; margin-top: .35rem; }
+  .whoami input[type="radio"] { position: absolute; opacity: 0; }
+  .whoami label {
+    margin: 0; flex: 1; text-align: center; cursor: pointer; text-transform: none; letter-spacing: 0;
+    font-size: .9rem; font-weight: 600; color: var(--ink-2);
+    background: #FBFCFC; border: 1px solid #C7CDD3; border-radius: 6px; padding: .6rem .5rem;
+  }
+  .whoami input[type="radio"]:checked + label { border-color: var(--accent); color: var(--accent); background: var(--tint); }
+  .whoami input[type="radio"]:focus-visible + label { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .cond { display: none; }
+  .apply:has(#who-ind:checked) .cond.ind { display: block; }
+  .apply:has(#who-agency:checked) .cond.agency { display: block; }
+  .apply .cta { margin-top: 1.5rem; width: 100%; justify-content: center; }
+  .apply-note { font-size: .74rem; color: var(--ink-3); margin-top: .8rem; text-align: center; font-weight: 500; }
+
+  .final { padding: 4.5rem 0 5rem; }
+
+  /* ── Enterprise footer: sitemap columns + social ─────────────────────── */
+  footer.site { background: var(--surface); border-top: 1px solid var(--rule); margin-top: 1rem; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; padding: 2.6rem 0 2rem; }
+  .foot-brand p { font-size: .85rem; margin: .6rem 0 1rem; max-width: 32ch; }
+  .foot-col h4 { font-size: .7rem; letter-spacing: .11em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin: 0 0 .8rem; }
+  .foot-col a { display: block; color: var(--ink-2); text-decoration: none; font-size: .88rem; padding: .22rem 0; }
+  .foot-col a:hover { color: var(--accent); }
+  .social { display: flex; gap: .55rem; }
+  .social a {
+    width: 2.1rem; height: 2.1rem; border: 1px solid #C7CDD3; border-radius: 6px;
+    display: flex; align-items: center; justify-content: center; color: var(--ink-2);
+  }
+  .social a:hover { border-color: var(--accent); color: var(--accent); }
+  .social svg { width: 1rem; height: 1rem; fill: currentColor; }
+  .foot-bottom { border-top: 1px solid var(--rule); padding: 1.1rem 0 1.4rem; display: flex; flex-wrap: wrap; gap: .5rem 2rem; justify-content: space-between; font-size: .76rem; color: var(--ink-3); }
+
+  @media (max-width: 900px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 840px) {
+    .triad, .principles, .model, .split { grid-template-columns: 1fr; }
+    .why-grid { grid-template-columns: 1fr; gap: 1.6rem; }
+    .why-figure { max-width: 440px; }
+    .timeline { grid-template-columns: 1fr 1fr; gap: 1.4rem 1.6rem; }
+    .timeline::before { display: none; }
+    .partner .grid { grid-template-columns: 1fr; }
+    .partner .lr { border-left: 0; border-top: 1px solid var(--rule); padding: 1.4rem 0 0; }
+  }
+  @media (max-width: 560px) { .foot-grid { grid-template-columns: 1fr; } .timeline { grid-template-columns: 1fr; } }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<header class="site">
+  <div class="shell">
+    <a class="wordmark" href="/">Goofre™<small>Agentic Commerce Orchestrator™</small></a>
+    <nav class="nav">
+      <a href="#why">Why now</a>
+      <a href="#numbers">The numbers</a>
+      <a href="#role">The role</a>
+      <a href="#platform">The platform</a>
+      <a class="cta" style="padding:.5rem 1rem;font-size:.88rem;" href="#apply">Join as an ACO™</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════════════ HERO ══════════════════ -->
+<div class="shell">
+  <section class="hero" id="top">
+    <h1>Become what comes after the e&#8209;commerce developer.</h1>
+    <p class="hero-sub">
+      Shoppers are starting to ask agents instead of visiting stores. The storefront you have spent
+      a career perfecting is becoming a data source, and the platforms are automating what used to
+      be billable work. Squeezed from both sides, the role is not dying: <strong>it is moving up
+      the stack.</strong> Goofre makes e‑commerce developers into
+      <strong>Agentic Commerce Orchestrators™</strong>, the people who run commerce in the
+      agent era.
+    </p>
+    <div style="display:flex;gap:.7rem;flex-wrap:wrap;margin:1.8rem 0 0;">
+      <a class="cta" href="#apply">Join as an ACO™</a>
+      <a class="cta ghost" href="#why">Why now</a>
+    </div>
+    <p class="hero-note">A first-of-its-kind orchestration layer.</p>
+  </section>
+
+  <aside class="merchant-band">
+    <p><strong>Run a store?</strong> This page is for the people who will ready it. A certified
+    ACO™ delivers the audit and the fixes as a done-for-you service.</p>
+    <a href="https://reachviveksai-cloud.github.io/logicrays-landing/?src=goofre-home">Logic Rays, founding ACO™ →</a>
+  </aside>
+
+  <!-- ══════════════════ 01 · WHY NOW ══════════════════ -->
+  <section id="why">
+    <p class="eyebrow">01 · Why now</p>
+    <h2>The two-front squeeze, and the way up.</h2>
+
+    <div class="why-grid">
+      <div class="why-copy">
+        <p>
+          <strong>Front one: the website is losing its shoppers.</strong> Agents crawl your catalog,
+          compare it against every competitor, and answer inside ChatGPT, Gemini or Claude. The
+          shopper never sees the theme, the UX, or the checkout you built. The agent does.
+        </p>
+        <p>
+          <strong>Front two: the platforms are automating the rest.</strong> Every release from
+          Shopify and its peers absorbs another task that used to be a project: themes, setup,
+          integrations. That is not a complaint. Automating is their job. But it thins the work that
+          made e‑commerce development a career.
+        </p>
+        <p style="margin-bottom:0;">
+          <strong>The work that remains cannot be platform-automated, because it sits above the
+          platforms.</strong> Making stores legible, verifiable and transactable to agents is
+          protocol work, the same across Shopify, Magento and WooCommerce, and it never finishes:
+          the standards move monthly. When servers went to the cloud, the sysadmins who moved up the
+          stack became DevOps engineers and ran the industry. This is that moment for e‑commerce
+          developers.
+        </p>
+      </div>
+
+      <figure class="panel why-figure">
+        <svg viewBox="0 0 480 430" xmlns="http://www.w3.org/2000/svg" role="img"
+             aria-label="Diagram: the e-commerce developer is squeezed on two fronts — shoppers shifting to agents, and platforms absorbing the work — and the way up is to rise above the platform line into the Agentic Commerce Orchestrator role.">
+          <!-- ACO, the destination, at the top -->
+          <rect class="d-box accent" x="70" y="20" width="340" height="70"/>
+          <text class="d-label accent" x="240" y="50" text-anchor="middle" style="font-size:13px;">Agentic Commerce Orchestrator™</text>
+          <text class="d-label dim" x="240" y="70" text-anchor="middle">the role above the platforms</text>
+
+          <!-- the rise: a bold arrow breaking up through the platform line -->
+          <line class="d-line accent" x1="240" y1="250" x2="240" y2="100" style="stroke-width:2.5;"/>
+          <polygon points="240,92 231,108 249,108" fill="#047857"/>
+
+          <!-- the platform line: dashed, broken only where the arrow rises through it -->
+          <line class="d-line" x1="24" y1="178" x2="222" y2="178" style="stroke-dasharray:5 5;"/>
+          <line class="d-line" x1="258" y1="178" x2="456" y2="178" style="stroke-dasharray:5 5;"/>
+          <text class="d-label dim" x="456" y="166" text-anchor="end">the platforms</text>
+
+          <!-- the developer, below the line, being squeezed -->
+          <rect class="d-box" x="175" y="250" width="130" height="62"/>
+          <text class="d-label strong" x="240" y="277" text-anchor="middle">E-commerce</text>
+          <text class="d-label strong" x="240" y="295" text-anchor="middle">developer</text>
+
+          <!-- front one, pressing from the left -->
+          <text class="d-label accent" x="62" y="270" text-anchor="middle" style="font-size:9px;letter-spacing:.5px;">FRONT ONE</text>
+          <text class="d-label dim" x="62" y="286" text-anchor="middle">Shoppers shift</text>
+          <text class="d-label dim" x="62" y="299" text-anchor="middle">to agents</text>
+          <line class="d-line" x1="125" y1="281" x2="171" y2="281"/>
+          <polygon points="171,281 163,276 163,286" fill="#9AA4AF"/>
+
+          <!-- front two, pressing from the right -->
+          <text class="d-label accent" x="418" y="270" text-anchor="middle" style="font-size:9px;letter-spacing:.5px;">FRONT TWO</text>
+          <text class="d-label dim" x="418" y="286" text-anchor="middle">Platforms absorb</text>
+          <text class="d-label dim" x="418" y="299" text-anchor="middle">the work</text>
+          <line class="d-line" x1="355" y1="281" x2="309" y2="281"/>
+          <polygon points="309,281 317,276 317,286" fill="#9AA4AF"/>
+        </svg>
+        <figcaption>The squeeze presses from both sides. The exit is up: above the platforms.</figcaption>
+      </figure>
+    </div>
+
+    <p class="pull">The role isn't disappearing. It's being promoted.</p>
+  </section>
+
+  <!-- ══════════════════ 02 · THE NUMBERS ══════════════════ -->
+  <section id="numbers">
+    <p class="eyebrow">02 · The shift, in numbers</p>
+    <h2>This is not a forecast. It is last quarter's data.</h2>
+    <p>
+      If agentic commerce still sounds speculative, retail analytics already disagree. Current,
+      sourced figures, not projections:
+    </p>
+
+    <div class="stats">
+      <div class="stat"><b>393%</b><span>Year-over-year growth in AI traffic to U.S. retail sites in Q1 2026, measured across more than one trillion visits.</span><small>Adobe Analytics, Q1 2026</small></div>
+      <div class="stat"><b>+42%</b><span>AI-referred visitors now convert better than non-AI traffic. One year earlier they converted 38% worse.</span><small>Adobe Analytics, Mar 2026</small></div>
+      <div class="stat"><b>$262B</b><span>Sales driven by AI agents in the 2025 holiday season. One in five global online orders.</span><small>Salesforce, holiday 2025</small></div>
+      <div class="stat"><b>13×</b><span>Growth in orders arriving from AI-powered search on Shopify, Q1 2026 versus the prior year.</span><small>Shopify, Q1 2026</small></div>
+      <div class="stat"><b>90%</b><span>Share of B2B purchases projected to run through AI agents by 2028, routing over $15 trillion machine-to-machine.</span><small>Gartner projection</small></div>
+    </div>
+
+    <h3 style="margin-top:2.4rem;">What the giants are already doing about it</h3>
+    <div class="timeline">
+      <div class="tl"><b>OCT 2025</b><p>Walmart partners with OpenAI: shoppers buy directly inside ChatGPT through Instant Checkout.</p></div>
+      <div class="tl"><b>MAR 2026</b><p>OpenAI pivots Instant Checkout: discovery stays in ChatGPT, but the purchase now completes in the merchant's own checkout. Readiness on the merchant's side becomes the deciding factor, by OpenAI's own design.</p></div>
+      <div class="tl"><b>MAR 2026</b><p>Walmart plugs its own agent, Sparky, into ChatGPT and Gemini rather than ceding the transaction to anyone.</p></div>
+      <div class="tl"><b>ONGOING</b><p>Amazon blocks outside AI crawlers entirely, keeping its demand inside its own walls while roughly a third of ChatGPT retail referrals flow to Walmart.</p></div>
+    </div>
+
+    <p class="pull">The giants are building their own agents and defenses. Every other merchant on
+    earth needs someone to do it for them. That someone is the ACO™.</p>
+    <p class="sources">Sources: Adobe Analytics, Salesforce, Shopify, Gartner, OpenAI and retail press, October 2025 to Q1 2026. Figures are refreshed quarterly and each carries its source.</p>
+  </section>
+
+  <!-- ══════════════════ 03 · THE ROLE ══════════════════ -->
+  <section id="role">
+    <p class="eyebrow">03 · The role</p>
+    <h2>What an Agentic Commerce Orchestrator™ does.</h2>
+    <p>
+      An ACO™ is to agentic commerce what DevOps was to the cloud: the discipline that emerges
+      when the old job moves up the stack. The work never finishes, because the standards move
+      monthly. Three verbs, on repeat:
+    </p>
+
+    <div class="triad">
+      <div class="tcard">
+        <span class="tk">Find the gaps</span>
+        <h3>Audit</h3>
+        <p>Run the readiness engine against a live store: what agents can find, read, verify and
+        buy, graded A to F, with every gap named alongside its fix and its owner.</p>
+      </div>
+      <div class="tcard">
+        <span class="tk">Close them</span>
+        <h3>Improve, constantly</h3>
+        <p>Deploy and configure the storefront toolkit, close markup and policy gaps, verify
+        identity, bring the checkout to agent grade. Then keep it there as specs evolve.</p>
+      </div>
+      <div class="tcard">
+        <span class="tk">Prove it</span>
+        <h3>Report, relentlessly</h3>
+        <p>Operate the merchant portfolio from the orchestration console: a prioritized work queue
+        with due dates, re-scans on schedule, and score trajectory the merchant sees every month.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:1.4rem;color:var(--ink);font-weight:600;max-width:52ch;">
+      The engagement is a loop, not a project. That loop is the recurring business.
+    </p>
+  </section>
+
+  <!-- ══════════════════ 04 · THE PLATFORM ══════════════════ -->
+  <section id="platform">
+    <p class="eyebrow">04 · The platform you operate</p>
+    <h2>One platform. Every moving part of agent readiness.</h2>
+    <p>
+      Readiness is not a plugin install. It is precision work across storefront markup, product
+      feeds, identity, compliance and checkout: many interdependent systems where one wrong value
+      means the store looks fine and fails silently. It is closer to a surgeon's work than to
+      setup. Goofre is the operating theatre: the instruments, the monitoring and the discipline
+      in one place, operated by the ACO™.
+    </p>
+
+    <figure class="panel">
+      <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img"
+           aria-label="High-level architecture: the e-commerce developer operates Goofre, which connects the Magento store, Google Merchant Center, Google Analytics, Search Console and the UCP compliance layer, with orchestration agents working inside Goofre">
+        <!-- developer on top -->
+        <rect class="d-box" x="330" y="14" width="240" height="50"/>
+        <text class="d-label strong" x="450" y="36" text-anchor="middle">E-commerce developer</text>
+        <text class="d-label accent" x="450" y="53" text-anchor="middle">operating as the ACO™</text>
+        <line class="d-line accent" x1="450" y1="64" x2="450" y2="106"/>
+        <polygon points="450,110 444,99 456,99" fill="#047857"/>
+        <text class="d-label dim" x="475" y="92">operates</text>
+
+        <!-- Goofre hub -->
+        <rect class="d-box accent" x="270" y="112" width="360" height="190"/>
+        <text class="d-label accent" x="450" y="140" text-anchor="middle" style="font-size:15px;">Goofre</text>
+        <rect class="d-box inner" x="295" y="158" width="310" height="40"/>
+        <text class="d-label" x="450" y="182" text-anchor="middle">Orchestration agents · audit / sync / monitor</text>
+        <rect class="d-box inner" x="295" y="208" width="310" height="40"/>
+        <text class="d-label" x="450" y="232" text-anchor="middle">Readiness engine · graded audits</text>
+        <rect class="d-box inner" x="295" y="256" width="310" height="34"/>
+        <text class="d-label" x="450" y="278" text-anchor="middle">Console · work queue, reports</text>
+
+        <!-- Magento left -->
+        <rect class="d-box" x="30" y="176" width="180" height="62"/>
+        <text class="d-label strong" x="120" y="202" text-anchor="middle">Magento store</text>
+        <text class="d-label dim" x="120" y="220" text-anchor="middle">storefront + module</text>
+        <line class="d-line" x1="210" y1="207" x2="268" y2="207"/>
+        <polygon points="268,207 259,202 259,212" fill="#9AA4AF"/>
+        <polygon points="210,207 219,202 219,212" fill="#9AA4AF"/>
+
+        <!-- Google column right -->
+        <rect class="d-box" x="700" y="122" width="180" height="48"/>
+        <text class="d-label strong" x="790" y="143" text-anchor="middle">Google Merchant Center</text>
+        <text class="d-label dim" x="790" y="160" text-anchor="middle">catalog sync</text>
+        <rect class="d-box" x="700" y="184" width="180" height="48"/>
+        <text class="d-label strong" x="790" y="205" text-anchor="middle">Google Analytics</text>
+        <text class="d-label dim" x="790" y="222" text-anchor="middle">demand signals</text>
+        <rect class="d-box" x="700" y="246" width="180" height="48"/>
+        <text class="d-label strong" x="790" y="267" text-anchor="middle">Search Console</text>
+        <text class="d-label dim" x="790" y="284" text-anchor="middle">crawl visibility</text>
+        <line class="d-line" x1="632" y1="146" x2="698" y2="146"/><polygon points="698,146 689,141 689,151" fill="#9AA4AF"/>
+        <line class="d-line" x1="632" y1="208" x2="698" y2="208"/><polygon points="632,208 641,203 641,213" fill="#9AA4AF"/>
+        <line class="d-line" x1="632" y1="270" x2="698" y2="270"/><polygon points="632,270 641,265 641,275" fill="#9AA4AF"/>
+
+        <!-- UCP bottom -->
+        <rect class="d-box" x="330" y="352" width="240" height="52"/>
+        <text class="d-label strong" x="450" y="374" text-anchor="middle">UCP compliance</text>
+        <text class="d-label dim" x="450" y="392" text-anchor="middle">what agents verify before they buy</text>
+        <line class="d-line accent" x1="450" y1="302" x2="450" y2="350"/>
+        <polygon points="450,350 444,339 456,339" fill="#047857"/>
+        <text class="d-label dim" x="475" y="330">validates + serves</text>
+      </svg>
+      <figcaption>
+        High-level view, deliberately. The engine's full factor set is not published here: it
+        ships inside every audit report.
+      </figcaption>
+    </figure>
+
+    <div class="split">
+      <div class="split-copy">
+        <p class="lead-eyebrow">Built to be argued with</p>
+        <p>
+          The engine tests whether an agent could actually act on what a store publishes, not
+          whether a tag is merely present, which is why its scores run tougher than free checkers.
+          Every finding names where the problem lives and a fix that matches its cause, and every
+          audit records its engine version so month-over-month trajectory is honest.
+        </p>
+      </div>
+      <aside class="statement-card">
+        <p class="lead-eyebrow">Where this goes</p>
+        <p>
+          Readiness, with UCP conformance at its core, is the first thing ACO™s orchestrate. It
+          will not be the last: the ambition is an orchestration layer for everything commerce needs
+          in the agent era.
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ══════════════════ 05 · WHAT YOU GET ══════════════════ -->
+  <section id="membership">
+    <p class="eyebrow">05 · What you get as an ACO™</p>
+    <h2>You are not buying software. You are being made into a practitioner.</h2>
+    <p>
+      Membership is an enablement programme, not a login. Everything you need to walk into a store
+      and make it agent-ready comes with the title.
+    </p>
+
+    <div class="principles">
+      <div class="prin">
+        <h3>Cohort workshops</h3>
+        <p>Live sessions that take you from zero to fluent in agentic commerce, run with a cohort of
+        peers rather than a video course you watch alone. You learn the shift and the craft at
+        the same time.</p>
+      </div>
+      <div class="prin">
+        <h3>A working resource library</h3>
+        <p>Playbooks, the readiness standard, and remediation patterns, kept current as the
+        specifications move. What to reach for when you are looking at a real store, not theory.</p>
+      </div>
+      <div class="prin">
+        <h3>Goofre™ tool access</h3>
+        <p>The audit engine, the storefront toolkit and the orchestration console, included with
+        membership. The instruments an ACO™ operates, in your hands from day one.</p>
+      </div>
+      <div class="prin">
+        <h3>Certification by doing</h3>
+        <p>Training that makes you an Agentic Commerce Orchestrator™ by operating Goofre™ on real
+        stores, not by passing a quiz. The title is earned on the work, which is why it means
+        something.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ 06 · THE BUSINESS YOU BUILD ══════════════════ -->
+  <section id="business">
+    <p class="eyebrow">06 · The business you build</p>
+    <h2>A store you make ready today needs you again next month. That is a retainer, not a project.</h2>
+    <p>
+      Remember the squeeze. The platforms are automating <strong>one-off</strong> work, and that is
+      what thins a career built on projects. Readiness is the opposite kind of work: the standards
+      move monthly, so a store you make agent-ready today drifts out of readiness tomorrow. The very
+      thing that makes this work impossible to automate is what makes it <strong>recurring.</strong>
+    </p>
+
+    <div class="model">
+      <div class="model-step">
+        <span class="mn">01</span>
+        <h3>Start with the clients you already have</h3>
+        <p>You maintain stores, and you have the trust. Run the free audit on them, show the owner
+        exactly what an AI agent cannot yet buy, and you have opened the conversation from inside the
+        relationship. No cold pipeline.</p>
+      </div>
+      <div class="model-step">
+        <span class="mn">02</span>
+        <h3>Make it ready, and price the readiness</h3>
+        <p>Close the gaps with the Goofre™ toolkit. The audit's own report is your scope of work,
+        already costed by effort. A fixed-scope readiness project gets the store its grade.</p>
+      </div>
+      <div class="model-step">
+        <span class="mn">03</span>
+        <h3>Keep it ready, every month</h3>
+        <p>Readiness decays, so the engagement continues: scheduled re-scans, drift alerts, new
+        checks as the standard evolves, and a monthly report the merchant can see. One store made
+        ready becomes one monthly retainer. Ten stores become a book of recurring revenue.</p>
+      </div>
+    </div>
+
+    <p class="pull">Every store you make ready is recurring revenue. Own the readiness layer in
+    your market before someone else does.</p>
+  </section>
+
+  <!-- ══════════════════ FOUNDING ══════════════════ -->
+  <section id="founding">
+    <div class="partner">
+      <div class="grid">
+        <div>
+          <span class="founding">The proof it works</span>
+          <h2>The first ACO™ is already operating.</h2>
+          <p>
+            Goofre is co-built by product engineers and the people who use it in anger. The model
+            is not theoretical: the founding ACO™ runs real merchant portfolios on this platform
+            today, with audits, remediations and monthly trajectory reports.
+          </p>
+        </div>
+        <div class="lr">
+          <b>Logic Rays</b>
+          <p>Founding Agentic Commerce Orchestrator™ and co-builder. A decade of Magento
+          engineering and hundreds of delivered stores, now operating merchant readiness on the
+          Goofre layer.</p>
+          <a href="https://reachviveksai-cloud.github.io/logicrays-landing/?src=goofre-home">See the merchant-facing service →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════ 07 · JOIN ══════════════════ -->
+  <section class="final" id="apply">
+    <p class="eyebrow">07 · Join</p>
+    <h2>Become an Agentic Commerce Orchestrator™.</h2>
+    <p style="max-width:56ch">
+      For e‑commerce developers and agencies who want to own the readiness layer in their market.
+      Tell us who you are. Every application is reviewed by a human, with a reply within three
+      working days.
+    </p>
+
+    <form class="apply" method="post" action="#TODO-wire-application-endpoint">
+      <label for="a-name">Your name</label>
+      <input type="text" id="a-name" name="name" required autocomplete="name">
+
+      <label for="a-email">Email</label>
+      <input type="email" id="a-email" name="email" required autocomplete="email">
+
+      <label>I'm applying as</label>
+      <div class="whoami">
+        <input type="radio" name="applicant_type" value="individual" id="who-ind" checked>
+        <label for="who-ind">Individual developer</label>
+        <input type="radio" name="applicant_type" value="agency" id="who-agency">
+        <label for="who-agency">Agency</label>
+      </div>
+
+      <div class="cond ind">
+        <label for="a-linkedin">LinkedIn profile</label>
+        <input type="url" id="a-linkedin" name="linkedin" placeholder="https://linkedin.com/in/you">
+      </div>
+      <div class="cond agency">
+        <label for="a-website">Agency website</label>
+        <input type="url" id="a-website" name="website" placeholder="https://youragency.com">
+      </div>
+
+      <label for="a-about">What do you build today?</label>
+      <textarea id="a-about" name="about" placeholder="Platforms, store count, the work you're proudest of"></textarea>
+
+      <button class="cta" type="submit">Apply to join as an ACO™</button>
+      <p class="apply-note">Reviewed by a human · reply within 3 working days</p>
+    </form>
+  </section>
+</div>
+
+<!-- ══════════════════ FOOTER / SITEMAP ══════════════════ -->
+<footer class="site">
+  <div class="shell">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="wordmark" href="/">Goofre™<small>Agentic Commerce Orchestrator™</small></a>
+        <p>The platform and certification that make e‑commerce developers into the professionals
+        who run commerce in the agent era.</p>
+        <div class="social">
+          <a href="#TODO-linkedin" aria-label="Goofre on LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.24 8.31h4.52V23H.24V8.31zM8.34 8.31h4.33v2h.06c.6-1.14 2.08-2.34 4.28-2.34 4.58 0 5.42 3.01 5.42 6.92V23h-4.52v-7.13c0-1.7-.03-3.88-2.37-3.88-2.37 0-2.73 1.85-2.73 3.76V23H8.34V8.31z"/></svg></a>
+          <a href="#TODO-x" aria-label="Goofre on X"><svg viewBox="0 0 24 24"><path d="M18.24 2H21.5l-7.1 8.12L22.75 22h-6.56l-5.14-6.72L5.16 22H1.89l7.6-8.69L1.25 2h6.73l4.64 6.14L18.24 2zm-1.15 18.05h1.81L6.99 3.85H5.05l12.04 16.2z"/></svg></a>
+          <a href="#TODO-youtube" aria-label="Goofre on YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#why">Why now</a>
+        <a href="#numbers">The shift, in numbers</a>
+        <a href="#role">The ACO™ role</a>
+        <a href="#platform">The platform</a>
+        <a href="#apply">Join as an ACO™</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="#TODO-about">About</a>
+        <a href="#TODO-blog">Blog</a>
+        <a href="#TODO-contact">Contact</a>
+        <a href="https://reachviveksai-cloud.github.io/logicrays-landing/">Merchant service (Logic Rays)</a>
+      </div>
+      <div class="foot-col">
+        <h4>Legal</h4>
+        <a href="#TODO-privacy">Privacy policy</a>
+        <a href="#TODO-terms">Terms of service</a>
+        <a href="#TODO-trademark">Trademark usage</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Goofre. "Agentic Commerce Orchestrator"™ and "ACO"™ are trademarks of Goofre, conferred on certified members.</span>
+      <span>Built for the agent era.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
