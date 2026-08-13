@@ -579,12 +579,14 @@
       feeds, identity, compliance and checkout: many interdependent systems where one wrong value
       means the store looks fine and fails silently. It is closer to a surgeon's work than to
       setup. Goofre™ is the operating theatre: the instruments, the monitoring and the discipline
-      in one place, operated by the ACO™.
+      in one place, operated by the ACO™. It keeps a store conformant to the standards agents
+      actually use — <strong>ACP</strong> for checkout, <strong>AP2</strong> for payment,
+      <strong>MCP</strong> for access — not one vendor's plugin.
     </p>
 
     <figure class="panel">
       <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img"
-           aria-label="High-level architecture: the e-commerce developer operates Goofre, which connects the Magento store, Google Merchant Center, Google Analytics, Search Console and the UCP compliance layer, with orchestration agents working inside Goofre">
+           aria-label="High-level architecture: the e-commerce developer operates Goofre, which connects the Magento store, Google Merchant Center, Google Analytics, Search Console and conforms the store to the agent commerce standards ACP, AP2 and MCP, with orchestration agents working inside Goofre">
         <!-- developer on top -->
         <rect class="d-box" x="330" y="14" width="240" height="50"/>
         <text class="d-label strong" x="450" y="36" text-anchor="middle">E-commerce developer</text>
@@ -625,10 +627,10 @@
         <line class="d-line" x1="632" y1="208" x2="698" y2="208"/><polygon points="632,208 641,203 641,213" fill="#9AA4AF"/>
         <line class="d-line" x1="632" y1="270" x2="698" y2="270"/><polygon points="632,270 641,265 641,275" fill="#9AA4AF"/>
 
-        <!-- UCP bottom -->
-        <rect class="d-box" x="330" y="352" width="240" height="52"/>
-        <text class="d-label strong" x="450" y="374" text-anchor="middle">UCP compliance</text>
-        <text class="d-label dim" x="450" y="392" text-anchor="middle">what agents verify before they buy</text>
+        <!-- external standards the store is conformed to -->
+        <rect class="d-box" x="315" y="352" width="270" height="52"/>
+        <text class="d-label strong" x="450" y="374" text-anchor="middle">Agent commerce standards</text>
+        <text class="d-label dim" x="450" y="392" text-anchor="middle">ACP · AP2 · MCP · structured data</text>
         <line class="d-line accent" x1="450" y1="302" x2="450" y2="350"/>
         <polygon points="450,350 444,339 456,339" fill="#047857"/>
         <text class="d-label dim" x="475" y="330">validates + serves</text>
@@ -652,9 +654,9 @@
       <aside class="statement-card">
         <p class="lead-eyebrow">Where this goes</p>
         <p>
-          Readiness, with UCP conformance at its core, is the first thing ACO™s orchestrate. It
-          will not be the last: the ambition is an orchestration layer for everything commerce needs
-          in the agent era.
+          Readiness — conformance to the standards agents use (ACP, AP2, MCP), scored by Goofre™'s
+          engine — is the first thing ACO™s orchestrate. It will not be the last: the ambition is an
+          orchestration layer for everything commerce needs in the agent era.
         </p>
       </aside>
     </div>
