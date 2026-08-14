@@ -2,11 +2,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Goofre™ Blog — Agentic Commerce for E-commerce Developers | ACP, AP2, MCP, UCP explained</title>
-<meta name="description" content="The Goofre field guide: plain-English explainers on agentic commerce for e-commerce developers. Understand the protocol stack (ACP, AP2, MCP), Goofre's UCP readiness model, real market data, Magento AI readiness, and why the Agentic Commerce Orchestrator (ACO) is the role to own next.">
+<meta name="description" content="The Goofre field guide: plain-English explainers on agentic commerce for e-commerce developers. Understand the protocol stack (UCP, ACP, AP2, MCP), the Universal Commerce Protocol manifest, real market data, Magento AI readiness, and why the Agentic Commerce Orchestrator (ACO) is the role to own next.">
 <link rel="canonical" href="https://goofre.com/blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Goofre™ Blog — Agentic Commerce for E-commerce Developers">
-<meta property="og:description" content="Plain-English explainers on agentic commerce, the ACP / AP2 / MCP protocol stack, Goofre's UCP readiness model, real market data, and the Agentic Commerce Orchestrator (ACO) role.">
+<meta property="og:description" content="Plain-English explainers on agentic commerce, the UCP / ACP / AP2 / MCP protocol stack, real market data, and the Agentic Commerce Orchestrator (ACO) role.">
 <meta property="og:url" content="https://goofre.com/blog">
 <meta name="twitter:card" content="summary_large_image">
 
@@ -14,7 +14,8 @@
   Goofre developer blog — index / field guide.
   Entries are keyword-rich summaries (teasers). Full article bodies are a content
   follow-up; each <article id> is the anchor the landing-page tiles deep-link to.
-  Magento-first framing; open-source-era "Goofre OS / UCP deck" language retired.
+  Magento-first framing; open-source-era "Goofre OS" deck language retired. UCP is the Google/Shopify
+  Universal Commerce Protocol (an external open standard), not an internal Goofre model.
 -->
 
 <script type="application/ld+json">
@@ -22,13 +23,13 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "Goofre Blog — The field guide",
-  "description": "Explainers on agentic commerce for e-commerce developers: the ACP, AP2 and MCP protocol stack, Goofre's UCP readiness model, market data, Magento AI readiness, and the Agentic Commerce Orchestrator (ACO) role.",
+  "description": "Explainers on agentic commerce for e-commerce developers: the UCP, ACP, AP2 and MCP protocol stack, market data, Magento AI readiness, and the Agentic Commerce Orchestrator (ACO) role.",
   "url": "https://goofre.com/blog",
   "publisher": { "@type": "Organization", "name": "Goofre", "url": "https://goofre.com" },
   "blogPost": [
     { "@type": "BlogPosting", "headline": "What is agentic commerce? A field guide for e-commerce developers", "url": "https://goofre.com/blog#what-is-agentic-commerce", "keywords": "agentic commerce, AI shopping agents, e-commerce developers, agentic data search" },
     { "@type": "BlogPosting", "headline": "ACP, AP2 and MCP, explained simply", "url": "https://goofre.com/blog#acp-ap2-mcp-explained", "keywords": "Agentic Commerce Protocol, ACP, Agent Payments Protocol, AP2, Model Context Protocol, MCP, agent checkout" },
-    { "@type": "BlogPosting", "headline": "UCP: how Goofre scores agentic-commerce readiness", "url": "https://goofre.com/blog#what-is-ucp", "keywords": "UCP, agentic commerce readiness, Goofre readiness engine, structured data, ACP AP2 MCP mapping" },
+    { "@type": "BlogPosting", "headline": "What is UCP? Google and Shopify's Universal Commerce Protocol, explained", "url": "https://goofre.com/blog#what-is-ucp", "keywords": "UCP, Universal Commerce Protocol, Google UCP, Shopify UCP, well-known ucp manifest, UCP conformance, agentic commerce standard" },
     { "@type": "BlogPosting", "headline": "The ACO is e-commerce's Forward Deployed Engineer", "url": "https://goofre.com/blog#aco-is-the-fde-of-ecommerce", "keywords": "Agentic Commerce Orchestrator, ACO, Forward Deployed Engineer, FDE, e-commerce developer career" },
     { "@type": "BlogPosting", "headline": "Agentic commerce by the numbers (2026)", "url": "https://goofre.com/blog#agentic-commerce-by-the-numbers", "keywords": "agentic commerce statistics, AI shopping data 2026, AI traffic conversion, ChatGPT checkout" },
     { "@type": "BlogPosting", "headline": "Is your Magento store invisible to AI shoppers?", "url": "https://goofre.com/blog#magento-agentic-readiness", "keywords": "Magento agentic commerce, Magento AI readiness, product feed, structured data, agent checkout" }
@@ -110,11 +111,11 @@
     <h1>Agentic commerce, explained for the people who build stores.</h1>
     <p class="lede">
       Plain-English explainers on agentic commerce for e-commerce developers: the protocol stack
-      (<strong>ACP</strong>, <strong>AP2</strong>, <strong>MCP</strong>), Goofre&trade;'s
-      <strong>UCP</strong> readiness model, real market data, Magento AI readiness, and why the
+      (<strong>UCP</strong>, <strong>ACP</strong>, <strong>AP2</strong>, <strong>MCP</strong>), real
+      market data, Magento AI readiness, and why the
       <strong>Agentic Commerce Orchestrator&trade; (ACO&trade;)</strong> is the role to own next.
     </p>
-    <p class="kw">Topics: agentic commerce · AI shopping agents · Agentic Commerce Protocol (ACP) · Agent Payments Protocol (AP2) · Model Context Protocol (MCP) · Magento AI readiness · ACO&trade; careers</p>
+    <p class="kw">Topics: agentic commerce · AI shopping agents · Universal Commerce Protocol (UCP) · Agentic Commerce Protocol (ACP) · Agent Payments Protocol (AP2) · Model Context Protocol (MCP) · Magento AI readiness · ACO&trade; careers</p>
   </section>
 
   <div class="posts">
@@ -147,14 +148,13 @@
 
     <a class="post" id="what-is-ucp" href="blog-what-is-ucp.html">
       <span class="cat">Protocols</span>
-      <h2>UCP: how Goofre&trade; scores agentic-commerce readiness</h2>
-      <p><strong>UCP is Goofre&trade;'s readiness model</strong>, not another external standard to chase. It
-      takes the vague question &ldquo;is our store AI-ready?&rdquo; and turns it into a graded, fixable
-      score by measuring your store against the standards agents actually use (ACP, AP2, MCP) and the
-      structured-data foundations beneath them. This post explains how UCP maps a store across five
-      layers of readiness, why a transactability-weighted score runs tougher than a free checker, and how
-      an <strong>Agentic Commerce Orchestrator&trade;</strong> uses it to close gaps in priority order.</p>
-      <span class="meta">6 min read · Protocols</span>
+      <h2>What is UCP? Google and Shopify's Universal Commerce Protocol, explained</h2>
+      <p><strong>UCP is the Universal Commerce Protocol</strong>, the open standard co-developed by Google
+      and Shopify and launched at NRF in January 2026. It is how an AI agent discovers what your store can
+      do and completes a purchase. This post explains the <code>/.well-known/ucp</code> manifest, the
+      capabilities, schema versions and signing keys it declares, how UCP relates to ACP, AP2 and MCP, and
+      how Goofre&trade; measures your store's conformance to it.</p>
+      <span class="meta">7 min read · Protocols</span>
     </a>
 
     <a class="post" id="aco-is-the-fde-of-ecommerce" href="blog-aco-is-the-fde-of-ecommerce.html">

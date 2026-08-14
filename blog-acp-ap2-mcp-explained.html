@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>ACP, AP2 and MCP, Explained Simply (for E-commerce Developers) | Goofre™</title>
-<meta name="description" content="ACP, AP2 and MCP are the emerging open standards behind agentic commerce. A plain-English guide for e-commerce developers: what each protocol does, what it asks of a store, and how they map to Goofre's five readiness layers.">
+<title>UCP, ACP, AP2 and MCP, Explained Simply (for E-commerce Developers) | Goofre™</title>
+<meta name="description" content="UCP, ACP, AP2 and MCP are the open standards behind agentic commerce. A plain-English guide for e-commerce developers: what each protocol does, what it asks of a store, and how they map to Goofre's five readiness layers.">
 <link rel="canonical" href="https://goofre.com/blog/acp-ap2-mcp-explained">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ACP, AP2 and MCP, Explained Simply (for E-commerce Developers)">
-<meta property="og:description" content="The three open standards behind agentic commerce, in plain English: how an agent connects (MCP), how it proves it may pay (AP2), and how it completes a purchase (ACP).">
+<meta property="og:title" content="UCP, ACP, AP2 and MCP, Explained Simply (for E-commerce Developers)">
+<meta property="og:description" content="The open standards behind agentic commerce, in plain English: how an agent connects (MCP), how it proves it may pay (AP2), how it completes a purchase (ACP), and how your store declares what it can do (UCP).">
 <meta property="og:url" content="https://goofre.com/blog/acp-ap2-mcp-explained">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="blog-article.css">
@@ -14,10 +14,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "ACP, AP2 and MCP, explained simply",
-  "description": "ACP, AP2 and MCP are the emerging open standards behind agentic commerce. What each protocol does, what it asks of a store, and how they map to the five readiness layers.",
+  "headline": "UCP, ACP, AP2 and MCP, explained simply",
+  "description": "UCP, ACP, AP2 and MCP are the open standards behind agentic commerce. What each protocol does, what it asks of a store, and how they map to the five readiness layers.",
   "mainEntityOfPage": "https://goofre.com/blog/acp-ap2-mcp-explained",
-  "keywords": "Agentic Commerce Protocol, ACP, Agent Payments Protocol, AP2, Model Context Protocol, MCP, agent checkout, agentic payments, e-commerce developers",
+  "keywords": "Universal Commerce Protocol, UCP, Agentic Commerce Protocol, ACP, Agent Payments Protocol, AP2, Model Context Protocol, MCP, agent checkout, agentic payments, e-commerce developers",
   "articleSection": "Protocols",
   "author": { "@type": "Organization", "name": "Goofre" },
   "publisher": { "@type": "Organization", "name": "Goofre", "url": "https://goofre.com" }
@@ -40,21 +40,21 @@
   <article class="article">
     <p class="crumb"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / ACP, AP2 and MCP explained</p>
     <span class="cat">Protocols</span>
-    <h1>ACP, AP2 and MCP, explained simply</h1>
+    <h1>UCP, ACP, AP2 and MCP, explained simply</h1>
     <p class="meta">7 min read · Protocols · Updated 2026</p>
 
-    <p class="lede">Agentic commerce runs on plumbing, and that plumbing has names. Three open
-    standards, ACP, AP2 and MCP, describe how an AI agent connects to a store, proves it is allowed
-    to pay, and completes a purchase. If you build or run e-commerce stores, these are the interfaces
-    your storefront will be judged against. Here is what each one does, in plain English, and what it
-    asks of your store.</p>
+    <p class="lede">Agentic commerce runs on plumbing, and that plumbing has names. Four open
+    standards, UCP, ACP, AP2 and MCP, describe how an AI agent connects to a store, proves it is allowed
+    to pay, completes a purchase, and learns what your store can do in the first place. If you build or
+    run e-commerce stores, these are the interfaces your storefront will be judged against. Here is what
+    each one does, in plain English, and what it asks of your store.</p>
 
     <p>The names look like alphabet soup, but the ideas are simple. An agent shopping on a person's
-    behalf has to do three separable jobs: reach and read your data, prove it has permission to spend
-    money, and drive a checkout to completion. The industry did not want a different bespoke integration
-    per agent and per merchant, so it is converging on shared, open protocols for each job. These are
-    emerging standards, still moving, but they are the direction the market is walking in, and a store
-    built to speak them is a store an agent can actually buy from.</p>
+    behalf has to do a few separable jobs: discover what your store supports, reach and read your data,
+    prove it has permission to spend money, and drive a checkout to completion. The industry did not want
+    a different bespoke integration per agent and per merchant, so it is converging on shared, open
+    protocols for each job. They are still moving, but they are the direction the market is walking in,
+    and a store built to speak them is a store an agent can actually buy from.</p>
 
     <h2>MCP: how an agent connects to your data and tools</h2>
     <p>The <strong>Model Context Protocol (MCP)</strong>, from Anthropic, is the open standard for how an
@@ -85,11 +85,17 @@
 
     <h2>ACP: how an agent completes the purchase</h2>
     <p>The <strong>Agentic Commerce Protocol (ACP)</strong>, from OpenAI and Stripe, is the open standard for
-    how an AI agent actually completes a purchase: product feed to cart to checkout. It is the protocol behind
-    agent checkout inside ChatGPT, the Instant Checkout experience, where a shopper can go from "find me this"
-    to a completed order without leaving the conversation. ACP describes the whole transaction handshake: how a
-    merchant publishes buyable products, how an agent assembles a cart, and how checkout is driven to
-    completion programmatically.</p>
+    how an AI agent gets from a product to a completed purchase: feed to cart to checkout. It began as the
+    protocol behind in-chat buying in ChatGPT, and it is worth knowing how that turned out. OpenAI launched
+    Instant Checkout in September 2025 and <strong>withdrew it in March 2026</strong>, after very few merchants
+    completed an integration and conversion in the chat window came in far below the same merchants' own
+    storefronts. ACP did not go away; its role shifted. Today it standardises how an agent retrieves a live
+    product feed with accurate photos, price and stock variants, and then hands the shopper into the
+    <em>merchant's own</em> checkout.</p>
+    <p>That correction is the most useful thing in this article. The market tried moving the transaction onto
+    the AI platform, and it did not hold. Discovery and reasoning belong to the agent; the cart, the checkout
+    and the customer relationship stay on infrastructure you own. Which means readiness is your job, and it is
+    not something a platform will do for you.</p>
     <p>For a store, ACP is the transactability layer made concrete. It is not enough that an agent can find you
     and trust you; it has to be able to buy without a human tabbing through modals and address forms. A store
     built to speak ACP exposes a clean product feed, a cart an agent can construct, and a checkout an agent can
@@ -97,9 +103,29 @@
     have never tested, because a human checkout that works fine says nothing about whether a machine can drive
     the same flow.</p>
 
-    <h2>How ACP, AP2 and MCP map to the five readiness layers</h2>
-    <p>Goofre™ scores a store across five layers, and each protocol lands on specific ones. The layers gate each
-    other in order, so an agent that cannot get past an early layer never reaches the later ones.</p>
+    <h2>UCP: how your store declares what it can do</h2>
+    <p>The fourth standard is the one that ties the others together. <strong>UCP, the Universal Commerce
+    Protocol</strong>, was co-developed by <strong>Google and Shopify</strong> and launched at NRF in
+    January 2026. Where ACP standardises the checkout and AP2 standardises the payment authorisation, UCP
+    covers the whole commerce journey, from discovery through cart to post-purchase support.</p>
+    <p>Its central idea is decentralised discovery. Instead of every AI platform negotiating a private
+    integration with every retailer, your store publishes a JSON manifest at
+    <strong><code>/.well-known/ucp</code></strong> declaring the capabilities it supports (for example
+    <code>dev.ucp.shopping.checkout</code>), the schema versions it speaks, its payment handlers, and the
+    public signing keys an agent can verify requests against. Any compliant agent reads that manifest and
+    knows how to work with you.</p>
+    <p>UCP is also transport-agnostic. It rides over plain REST, over <strong>MCP</strong>, or over
+    Google's Agent-to-Agent standard, which means a UCP capability exposed as an MCP tool is instantly
+    callable by any MCP-compatible agent. Its adopter list already includes Etsy, Wayfair, Walmart, Target
+    and Home Depot, and its technical council has grown to include Amazon, Meta, Microsoft, Salesforce and
+    Stripe. Importantly for merchants, UCP keeps you as the Merchant of Record: you retain the customer
+    relationship and the first-party transaction data. There is a
+    <a href="blog-what-is-ucp.html">full guide to UCP here</a>.</p>
+
+    <h2>How UCP, ACP, AP2 and MCP map to the five readiness layers</h2>
+    <p>Goofre&trade; scores a store across five layers, and each protocol lands on specific ones. The layers gate each
+    other in order, so an agent that cannot get past an early layer never reaches the later ones. UCP spans the
+    whole journey, which is why it shows up at more than one level.</p>
     <ul>
       <li><strong>Access.</strong> Can the agent reach your content and interfaces at all? This is where
       <strong>MCP</strong> starts: a described, connectable surface an agent can plug into rather than scrape.</li>
@@ -114,17 +140,20 @@
       <li><strong>Reliability.</strong> Does it all stay true over time? No single protocol guarantees this. It
       is the discipline of keeping stock, price and terms accurate so an agent that bought once is not
       embarrassed the next time.</li>
+      <li><strong>Across all five: UCP.</strong> The manifest declares what your store supports, the capability
+      schemas describe how each operation behaves, and the signing keys let an agent verify it is talking to the
+      real you. UCP is the standard Goofre&trade; scores conformance against most directly.</li>
     </ul>
-    <p>Read top to bottom, the three protocols line up almost cleanly: MCP gets the agent in and reading, AP2
-    lets it be trusted to pay, ACP lets it complete the sale. Reliability is the layer you own by operating
-    well, not by adopting a spec.</p>
+    <p>Read top to bottom, they line up almost cleanly: MCP gets the agent in and reading, AP2 lets it be trusted
+    to pay, ACP lets it complete the sale, and UCP is how your store announces that all of this is on offer.
+    Reliability is the layer you own by operating well, not by adopting a spec.</p>
 
     <h2>Mentioned is not the same as buyable</h2>
     <p>It is worth being blunt about the gap these protocols expose. Search engine optimisation, and its newer
     cousin answer engine optimisation, work hard to get your store <em>mentioned</em> by AI. That is real, and
     it matters, but it covers roughly the access and comprehension layers and stops there. Being talked about by
     an assistant is not the same as being <em>buyable</em> by one.</p>
-    <p>ACP, AP2 and MCP are what make a store buyable rather than merely mentioned. A store can rank beautifully
+    <p>UCP, ACP, AP2 and MCP are what make a store buyable rather than merely mentioned. A store can rank beautifully
     in an AI answer and still be a dead end at checkout because it cannot prove a payment is authorised or cannot
     let a machine complete an order. The mention is marketing. The protocols are revenue. Measuring one tells you
     nothing about the other, which is exactly why readiness needs its own score.</p>
@@ -135,10 +164,12 @@
         <li>MCP, from Anthropic, is how an agent connects to and reads your data and tools: the USB-C for AI.</li>
         <li>AP2, led by Google with 60+ payment networks, uses signed mandates so a merchant can trust a
         machine-initiated payment.</li>
-        <li>ACP, from OpenAI and Stripe, is how an agent completes a purchase, powering Instant Checkout in
-        ChatGPT.</li>
+        <li>ACP, from OpenAI and Stripe, standardises how an agent retrieves a live product feed and hands off
+        into a checkout.</li>
+        <li>UCP, from Google and Shopify, is how your store declares its capabilities, schema versions, payment
+        handlers and signing keys, in a manifest at <code>/.well-known/ucp</code>.</li>
         <li>They map cleanly onto readiness: MCP to access and comprehension, AP2 to identity and trust, ACP to
-        transactability.</li>
+        transactability, and UCP across the whole journey.</li>
         <li>These are emerging open standards. A store that speaks them is buyable, not just mentioned.</li>
       </ul>
     </div>

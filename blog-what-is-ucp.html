@@ -1,12 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>UCP: How Goofre™ Scores Agentic-Commerce Readiness | Goofre™</title>
-<meta name="description" content="UCP is Goofre's own readiness model, not an outside spec. It turns 'are we AI-ready?' into a graded, fixable score across five layers, mapped to ACP, AP2, MCP and Schema.org, and weighted toward whether an agent could actually transact.">
+<title>What Is UCP? Google and Shopify's Universal Commerce Protocol, Explained | Goofre™</title>
+<meta name="description" content="UCP is the Universal Commerce Protocol, the open standard from Google and Shopify that lets AI agents discover and buy from your store. How the /.well-known/ucp manifest works, what it declares, and how Goofre measures your store's conformance to it.">
 <link rel="canonical" href="https://goofre.com/blog/what-is-ucp">
 <meta property="og:type" content="article">
-<meta property="og:title" content="UCP: how Goofre scores agentic-commerce readiness">
-<meta property="og:description" content="UCP is Goofre's readiness model. It grades a store across five layers, maps it to ACP, AP2, MCP and structured data, and runs transactability-weighted so the score reflects whether an agent could truly buy.">
+<meta property="og:title" content="What is UCP? Google and Shopify's Universal Commerce Protocol, explained">
+<meta property="og:description" content="The open standard that lets AI agents discover, understand and buy from your store. How the /.well-known/ucp manifest works and how Goofre scores conformance to it.">
 <meta property="og:url" content="https://goofre.com/blog/what-is-ucp">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="blog-article.css">
@@ -14,10 +14,10 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "UCP: how Goofre scores agentic-commerce readiness",
-  "description": "UCP is Goofre's own readiness model, not an external standard. It grades a store across five layers and maps it to ACP, AP2, MCP and Schema.org, weighted toward whether an agent could actually transact.",
+  "headline": "What is UCP? Google and Shopify's Universal Commerce Protocol, explained",
+  "description": "UCP is the Universal Commerce Protocol, an open standard co-developed by Google and Shopify for agentic commerce. How the /.well-known/ucp manifest works, what capabilities and signing keys it declares, and how Goofre measures a store's conformance.",
   "mainEntityOfPage": "https://goofre.com/blog/what-is-ucp",
-  "keywords": "UCP, agentic commerce readiness, Goofre readiness engine, structured data, readiness score, five layers, ACP AP2 MCP",
+  "keywords": "UCP, Universal Commerce Protocol, Google UCP, Shopify UCP, well-known ucp manifest, agentic commerce standard, UCP conformance, agentic commerce readiness, ACP AP2 MCP",
   "articleSection": "Protocols",
   "author": { "@type": "Organization", "name": "Goofre" },
   "publisher": { "@type": "Organization", "name": "Goofre", "url": "https://goofre.com" }
@@ -40,104 +40,124 @@
   <article class="article">
     <p class="crumb"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / What is UCP</p>
     <span class="cat">Protocols</span>
-    <h1>UCP: how Goofre&trade; scores agentic-commerce readiness</h1>
-    <p class="meta">6 min read · Protocols · Updated 2026</p>
+    <h1>What is UCP? Google and Shopify's Universal Commerce Protocol, explained</h1>
+    <p class="meta">7 min read · Protocols · Updated 2026</p>
 
-    <p class="lede">UCP is Goofre&trade;'s own readiness model. It takes the vague, unanswerable question
-    every merchant is now asking, "are we AI-ready?", and turns it into a graded, fixable score. UCP is
-    not an outside standard you must comply with. It is how Goofre&trade; measures a store against the
-    external standards and the structured-data foundations beneath them.</p>
+    <p class="lede">UCP is the <strong>Universal Commerce Protocol</strong>, an open standard
+    co-developed by <strong>Google and Shopify</strong> and launched at NRF in January 2026. It is how an
+    AI shopping agent discovers what your store can do, understands your catalogue, and completes a
+    purchase without a human ever touching your site. If you build or run e-commerce stores, this is the
+    single most important specification to understand right now.</p>
 
-    <p>Let us be precise, because the naming in this space gets muddled fast. The open standards for
-    agentic commerce are <strong>ACP</strong>, <strong>AP2</strong> and <strong>MCP</strong>, plus the
-    Schema.org structured data that everything else sits on. Those are external specifications, authored
-    outside Goofre&trade;, and we cover them in a <a href="blog-acp-ap2-mcp-explained.html">sibling
-    article</a>. UCP is different. UCP is Goofre&trade;'s readiness framework: the instrument that scores
-    how well a given store actually satisfies those standards in practice. You do not implement UCP. Your
-    store gets measured by it.</p>
+    <p>The naming in this space gets muddled fast, so let us be precise. UCP is not a vendor product and
+    not a proprietary rubric. It is an open-source specification, published at
+    <a href="https://github.com/universal-commerce-protocol/ucp">github.com/universal-commerce-protocol/ucp</a>
+    with implementation guidance at
+    <a href="https://developers.google.com/merchant/ucp">developers.google.com/merchant/ucp</a>. Its
+    adopter list already includes Etsy, Wayfair, Walmart, Target and Home Depot, and its Tech Council has
+    expanded well beyond the original two authors to include Amazon, Meta, Microsoft, Salesforce and
+    Stripe. When a standard attracts that set of names inside a year, it stops being a bet and starts
+    being the floor.</p>
 
-    <h2>What UCP actually is</h2>
-    <p>Ask a developer "is our store AI-ready?" and you get a shrug, because the question has no natural
-    unit. Ready for what? Measured how? Passing or failing which bar? UCP exists to give that question a
-    number and, more usefully, a punch list. It grades a store, tells you which parts are strong, which
-    parts silently fail an agent, and which fix moves the needle most. The output is not a vibe. It is a
-    score with a remediation path attached.</p>
-    <p>The factor set that produces the score is not a marketing artifact you have to hunt for. It ships
-    inside every audit report, so an <strong>Agentic Commerce Orchestrator&trade; (ACO&trade;)</strong>
-    and the merchant see the same evidence: what was tested, what passed, what did not, and why it
-    matters. We keep the exact factor list unquantified here on purpose, because the point is not a magic
-    count of checks. The point is that the model tests the things that decide whether an agent can find,
-    trust and buy from you.</p>
-
-    <h2>Five layers, mapped to the real standards</h2>
-    <p>UCP grades a store across five layers, and each one gates the next. This is the same stack an AI
-    shopping agent walks in order, which is why UCP scores in that order rather than treating every check
-    as equal.</p>
+    <h2>The core idea: your store declares what it can do</h2>
+    <p>UCP is built on a decentralised, merchant-as-source-of-truth philosophy. Rather than every AI
+    platform negotiating a bespoke integration with every retailer, the merchant publishes a machine
+    readable declaration of its own capabilities, and any compliant agent reads it.</p>
+    <p>That declaration is a JSON manifest hosted at a standardised path:
+    <strong><code>/.well-known/ucp</code></strong>. Think of it as your store's public technical
+    business card for machines. It declares:</p>
     <ul>
-      <li><strong>Access.</strong> Can an agent reach your content at all? Crawler permissions, retrievable
-      data, and endpoints an agent can actually call. This is where <strong>MCP</strong>, the model context
-      protocol for exposing tools and data to agents, comes into the picture.</li>
-      <li><strong>Comprehension.</strong> Can it understand what it reached? This is <strong>Schema.org</strong>
-      structured data: Product, Offer, price, availability, and feeds that agree with the page.</li>
-      <li><strong>Identity and trust.</strong> Can an agent trust you enough to act? Verified business
-      identity and machine-readable policies, the ground that <strong>AP2</strong>, the agent payments
-      protocol, needs before money moves.</li>
-      <li><strong>Transactability.</strong> Can it actually buy? A checkout an agent can drive and quotable
-      terms, the domain of <strong>ACP</strong>, the agentic commerce protocol.</li>
-      <li><strong>Reliability.</strong> Does it stay true over time? Stock and price that match reality, so a
-      store an agent recommended once is not wrong the next time it looks.</li>
+      <li><strong>Supported capabilities</strong>, namespaced strings such as
+      <code>dev.ucp.shopping.checkout</code> or <code>dev.ucp.shopping.fulfillment</code>, telling an
+      agent exactly which operations your store will honour.</li>
+      <li><strong>Schema versions</strong>, so an agent knows which revision of the specification your
+      endpoints speak and can negotiate compatibility at runtime.</li>
+      <li><strong>Payment handlers</strong>, declaring how a transaction can actually be settled.</li>
+      <li><strong>Public signing keys</strong>, typically ECDSA P-256, so your middleware can verify that
+      an inbound request genuinely came from an authorised agent and not from a bot wearing a costume.</li>
     </ul>
-    <p>Mapping each layer to a specific external standard is deliberate. It means a UCP score is not an
-    opinion about your store. It is a statement about how far your store carries a real agent, using ACP,
-    AP2, MCP and structured data as the yardsticks.</p>
+    <p>Underneath, UCP is an extensibility protocol built on JSON Schema, using <code>ucp_request</code>
+    and <code>ucp_response</code> annotations so a single schema can serve both directions of an
+    operation without duplication. Capabilities compose, and agents negotiate them dynamically rather
+    than assuming a fixed contract.</p>
 
-    <h2>Why the score is transactability-weighted</h2>
-    <p>A free readiness checker asks a shallow question: is the tag present? UCP asks a harder one: could an
-    agent actually act on it? Those are not the same test, and the gap between them is where most stores
-    lose sales they never see. A Product markup can validate cleanly and still carry a price that disagrees
-    with the feed. A return policy can exist and still live only in a PDF an agent cannot quote. A checkout
-    can load and still trap a machine at a modal.</p>
-    <p>So UCP runs tougher on purpose. The score is weighted toward transactability, because being mentioned
-    by an agent is marketing and being buyable by one is revenue. A store can light up green on comprehension
-    and still score poorly under UCP if an agent cannot verify it or cannot complete a purchase. That is the
-    intended behavior. UCP is built to predict the sale, not to reward the tag.</p>
+    <h2>UCP is transport-agnostic, which is why it matters</h2>
+    <p>UCP does not force a single wire format. It supports plain <strong>REST</strong>, Anthropic's
+    <strong>Model Context Protocol (MCP)</strong>, and Google's <strong>Agent-to-Agent (A2A)</strong>
+    standard as transport bindings. The practical consequence is powerful: a UCP checkout capability
+    exposed as an MCP tool becomes instantly callable by any MCP-compatible agent, including assistants
+    that have never heard of UCP. One implementation, many surfaces.</p>
+    <p>It also covers the whole commerce journey rather than just the moment of payment. Discovery, cart
+    assembly, checkout, fulfilment and post-purchase support all sit inside scope, expressed as
+    primitives such as <code>search_inventory</code>, <code>assemble_cart</code> and
+    <code>complete_checkout</code>. Crucially, the merchant remains the <strong>Merchant of Record</strong>
+    and keeps the customer relationship and first-party transaction data. UCP was designed so retailers
+    do not surrender their business to whichever assistant happens to send the traffic.</p>
 
-    <blockquote>A free checker asks whether a tag is present. UCP asks whether an agent could actually buy.</blockquote>
+    <h2>How UCP relates to ACP, AP2 and MCP</h2>
+    <p>These are complementary layers, not rivals fighting for one slot. We cover each in a
+    <a href="blog-acp-ap2-mcp-explained.html">sibling article</a>, but in short: <strong>MCP</strong> is
+    the tool and transport plumbing, <strong>AP2</strong> is the cryptographic authorisation layer that
+    proves a human allowed an agent to spend, <strong>ACP</strong> is OpenAI and Stripe's checkout
+    specification, and <strong>UCP</strong> is the full-lifecycle commerce standard that can ride on top
+    of MCP or A2A. Serious merchants are implementing more than one, exactly as retailers once optimised
+    for Google Shopping and Amazon simultaneously.</p>
 
-    <h2>Honest trajectory: every audit records its engine version</h2>
-    <p>Readiness is not a one-time grade. Standards move, agents get stricter, and your catalogue drifts.
-    That creates a subtle trap: if the scoring engine changes between two audits, a month-over-month
-    comparison is meaningless, because you are comparing two different rulers. UCP avoids that trap by
-    stamping every audit with the engine version that produced it.</p>
-    <p>That single piece of bookkeeping is what makes trajectory honest. When a merchant sees their score
-    climb from one month to the next, an ACO&trade; can say with confidence whether the store genuinely
-    improved or the ruler simply changed. Comparability is not a nice-to-have in a field this young. It is
-    the difference between a real progress report and a flattering chart.</p>
+    <blockquote>UCP is how your store tells an agent what it can do. Conformance is how you find out whether the agent believes you.</blockquote>
 
-    <h2>How an ACO&trade; turns the score into work</h2>
-    <p>A number on its own does not fix anything. The value of UCP is that it hands an <strong>Agentic
-    Commerce Orchestrator&trade;</strong> an ordered queue. Because the layers gate each other, the priority
-    is not guesswork: an access failure outranks a comprehension gap, and a trust gap outranks a cosmetic
-    one, since nothing above a broken layer can pay off until that layer is fixed.</p>
-    <p>So an ACO&trade; works the UCP report top down, closing the gaps that unlock the most agent behavior
-    first, then re-auditing to confirm the score moved for real. That is the loop Goofre&trade; is built
-    around: measure with UCP, remediate in priority order, re-measure against the same versioned engine,
-    and repeat as the standards evolve. It is how a store gets, and stays, genuinely buyable by agents,
-    starting with <a href="blog-magento-agentic-readiness.html">Magento stores</a>.</p>
+    <h2>Where Goofre&trade; fits: measuring conformance</h2>
+    <p>Publishing a manifest is not the same as being ready. A manifest can exist and be malformed, be
+    served without the CORS headers an agent needs, declare a schema version your endpoints do not
+    actually honour, or carry signing keys in the wrong format. Each of those looks fine to a human
+    glancing at the file and fails hard for a machine.</p>
+    <p>This is the job <strong>Goofre&trade;</strong> does. Goofre&trade;'s readiness engine audits a live
+    store and grades its <strong>UCP conformance</strong> alongside the wider readiness picture: whether
+    the manifest is present and valid, whether it is reachable and correctly versioned, whether signing
+    keys are properly formed, and whether the capabilities it advertises hold up when exercised. The
+    factor set ships inside every audit report, so the merchant and their
+    <strong>Agentic Commerce Orchestrator&trade; (ACO&trade;)</strong> see the same evidence: what was
+    tested, what passed, what did not, and why it matters.</p>
+    <p>The result is not an opinion about your store. It is a statement about how far your store carries a
+    real agent, measured against a public bar that Google, Shopify and most of the industry have already
+    agreed on.</p>
+
+    <h2>Five layers, and why the score runs tough</h2>
+    <p>Goofre&trade; grades across five layers, and each gates the next, because that is the order an
+    agent walks: <strong>Access</strong> (can it reach you), <strong>Comprehension</strong> (can it
+    understand your catalogue), <strong>Identity and trust</strong> (can it trust you enough to act),
+    <strong>Transactability</strong> (can it actually complete a purchase), and
+    <strong>Reliability</strong> (does it stay true next time).</p>
+    <p>A free checker asks a shallow question: is the tag present? The harder question is whether an agent
+    could actually act on it. A Product markup can validate cleanly and still carry a price that disagrees
+    with the feed. A return policy can exist and still live only in a PDF an agent cannot quote. So the
+    score is weighted toward transactability on purpose, because being mentioned by an agent is marketing
+    and being buyable by one is revenue.</p>
+
+    <h2>Honest trajectory, and turning a score into work</h2>
+    <p>Standards move, agents get stricter, and catalogues drift. If the scoring engine changes between
+    two audits, a month-over-month comparison is meaningless because you are comparing two different
+    rulers. Every Goofre&trade; audit is therefore stamped with the engine version that produced it, so an
+    ACO&trade; can say with confidence whether the store genuinely improved or the ruler simply changed.</p>
+    <p>From there the report becomes an ordered queue. Because the layers gate each other, priority is not
+    guesswork: an access failure outranks a comprehension gap, and a trust gap outranks a cosmetic one,
+    since nothing above a broken layer can pay off until that layer is fixed. An ACO&trade; works the
+    report top down, then re-audits against the same versioned engine to confirm the score moved for real.
+    That is the loop, and it starts with
+    <a href="blog-magento-agentic-readiness.html">Magento stores</a>.</p>
 
     <div class="takeaways">
       <h3>Key takeaways</h3>
       <ul>
-        <li>UCP is Goofre&trade;'s own readiness model, not an external standard to comply with.</li>
-        <li>It grades a store across five layers and maps them to ACP, AP2, MCP and Schema.org.</li>
-        <li>The score is transactability-weighted, so it runs tougher than a free tag checker.</li>
-        <li>Every audit records its engine version, so month-over-month trajectory is comparable.</li>
-        <li>An ACO&trade; uses the score to close gaps in priority order, then re-audits.</li>
+        <li>UCP is the Universal Commerce Protocol, an open standard from Google and Shopify, launched January 2026.</li>
+        <li>Your store declares its capabilities, schema versions, payment handlers and signing keys in a manifest at <code>/.well-known/ucp</code>.</li>
+        <li>It is transport-agnostic (REST, MCP, A2A) and covers discovery through post-purchase, with the merchant staying Merchant of Record.</li>
+        <li>ACP, AP2 and MCP are complementary layers, not competitors to UCP.</li>
+        <li>Goofre&trade; measures conformance to it, transactability-weighted, with every audit engine-versioned so trajectory is honest.</li>
       </ul>
     </div>
 
     <div class="article-cta">
-      <h3>Want to run UCP on real stores?</h3>
+      <h3>Want to do this work for a living?</h3>
       <p>Goofre&trade; turns e-commerce developers into Agentic Commerce Orchestrators&trade;, the
       professionals who measure, remediate and own agentic-commerce readiness.</p>
       <a class="cta" href="index.html#apply">Join as an ACO&trade; &rarr;</a>

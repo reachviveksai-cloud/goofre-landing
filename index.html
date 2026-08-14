@@ -603,13 +603,14 @@
       means the store looks fine and fails silently. It is closer to a surgeon's work than to
       setup. Goofre™ is the operating theatre: the instruments, the monitoring and the discipline
       in one place, operated by the ACO™. It keeps a store conformant to the standards agents
-      actually use — <strong>ACP</strong> for checkout, <strong>AP2</strong> for payment,
-      <strong>MCP</strong> for access — not one vendor's plugin.
+      actually use: <strong>UCP</strong>, the Universal Commerce Protocol from Google and Shopify, plus
+      <strong>ACP</strong> for checkout, <strong>AP2</strong> for payment and <strong>MCP</strong> for
+      access. Open standards, not one vendor's plugin.
     </p>
 
     <figure class="panel">
       <svg viewBox="0 0 900 430" xmlns="http://www.w3.org/2000/svg" role="img"
-           aria-label="High-level architecture: the e-commerce developer operates Goofre, which connects the Magento store, Google Merchant Center, Google Analytics, Search Console and conforms the store to the agent commerce standards ACP, AP2 and MCP, with orchestration agents working inside Goofre">
+           aria-label="High-level architecture: the e-commerce developer operates Goofre, which connects the Magento store, Google Merchant Center, Google Analytics, Search Console and conforms the store to the agent commerce standards UCP, ACP, AP2 and MCP, with orchestration agents working inside Goofre">
         <!-- developer on top -->
         <rect class="d-box" x="330" y="14" width="240" height="50"/>
         <text class="d-label strong" x="450" y="36" text-anchor="middle">E-commerce developer</text>
@@ -653,7 +654,7 @@
         <!-- external standards the store is conformed to -->
         <rect class="d-box" x="315" y="352" width="270" height="52"/>
         <text class="d-label strong" x="450" y="374" text-anchor="middle">Agent commerce standards</text>
-        <text class="d-label dim" x="450" y="392" text-anchor="middle">ACP · AP2 · MCP · structured data</text>
+        <text class="d-label dim" x="450" y="392" text-anchor="middle">UCP · ACP · AP2 · MCP · structured data</text>
         <line class="d-line accent" x1="450" y1="302" x2="450" y2="350"/>
         <polygon points="450,350 444,339 456,339" fill="#047857"/>
         <text class="d-label dim" x="475" y="330">validates + serves</text>
@@ -677,8 +678,8 @@
       <aside class="statement-card">
         <p class="lead-eyebrow">Where this goes</p>
         <p>
-          Readiness — conformance to the standards agents use (ACP, AP2, MCP), scored by Goofre™'s
-          engine — is the first thing ACO™s orchestrate. It will not be the last: the ambition is an
+          Readiness, meaning conformance to the standards agents use (UCP, ACP, AP2, MCP) as scored
+          by Goofre™'s engine, is the first thing ACO™s orchestrate. It will not be the last: the ambition is an
           orchestration layer for everything commerce needs in the agent era.
         </p>
       </aside>
@@ -829,7 +830,7 @@
     <p class="eyebrow">08 · The field guide</p>
     <h2>Learn the agent era. Written for developers.</h2>
     <p style="max-width:62ch;">
-      Plain-English explainers on agentic commerce, the protocol stack (ACP, AP2 and MCP), real
+      Plain-English explainers on agentic commerce, the protocol stack (UCP, ACP, AP2 and MCP), real
       market data, and why the Agentic Commerce Orchestrator™ is the role for e-commerce developers
       to own next. Written for the people who build and run Magento stores.
     </p>
@@ -850,9 +851,9 @@
       </a>
       <a class="post" href="blog-what-is-ucp.html">
         <span class="cat">Protocols</span>
-        <h3>UCP: how Goofre scores agentic-commerce readiness</h3>
-        <p>UCP is Goofre™'s readiness model. How it maps a store to ACP, AP2 and MCP and turns
-        &ldquo;are we AI-ready?&rdquo; into a graded, fixable score.</p>
+        <h3>What is UCP? Google and Shopify's Universal Commerce Protocol</h3>
+        <p>The open standard that lets AI agents discover and buy from your store: the
+        <code>/.well-known/ucp</code> manifest, and how Goofre™ scores conformance to it.</p>
         <span class="meta">6 min read · Protocols</span>
       </a>
       <a class="post" href="blog-aco-is-the-fde-of-ecommerce.html">
