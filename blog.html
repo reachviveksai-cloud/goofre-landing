@@ -70,7 +70,10 @@
 
   .posts { display:grid; grid-template-columns:repeat(2,1fr); gap:1.3rem; padding:1.2rem 0 3rem; }
   .post { display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--rule);
-    border-radius:12px; padding:1.9rem 1.9rem; }
+    border-radius:12px; padding:1.9rem 1.9rem; color:inherit; text-decoration:none;
+    transition:border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+  .post:hover { border-color:var(--accent); box-shadow:0 16px 34px -22px rgba(4,120,87,.55); transform:translateY(-2px); }
+  .post .readmore { margin-top:.2rem; font-size:.85rem; font-weight:700; color:var(--accent); }
   .post .cat { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:.7rem; }
   .post h2 { font-size:1.32rem; line-height:1.24; margin:0 0 .7rem; color:var(--ink); letter-spacing:-.01em; }
   .post p { font-size:.94rem; color:var(--ink-2); margin:0 0 1rem; }
@@ -116,7 +119,7 @@
 
   <div class="posts">
 
-    <article class="post" id="what-is-agentic-commerce">
+    <a class="post" id="what-is-agentic-commerce" href="blog-what-is-agentic-commerce.html">
       <span class="cat">Foundations</span>
       <h2>What is agentic commerce? A field guide for e-commerce developers</h2>
       <p><strong>Agentic commerce</strong> is shopping done by AI agents on a person's behalf. Instead of
@@ -127,9 +130,9 @@
       increasingly a piece of software. This guide covers how agents read a store, why most stores are
       invisible to them, and where the new billable work lives.</p>
       <span class="meta">8 min read · Foundations</span>
-    </article>
+    </a>
 
-    <article class="post" id="acp-ap2-mcp-explained">
+    <a class="post" id="acp-ap2-mcp-explained" href="blog-acp-ap2-mcp-explained.html">
       <span class="cat">Protocols</span>
       <h2>ACP, AP2 and MCP, explained simply</h2>
       <p>Three open standards now define agentic commerce, and every e-commerce developer should be able
@@ -140,9 +143,9 @@
       how an agent reaches and reads your store's data and tools. We map each to what it asks of your
       store, in plain English, with no standards-body jargon.</p>
       <span class="meta">7 min read · Protocols</span>
-    </article>
+    </a>
 
-    <article class="post" id="what-is-ucp">
+    <a class="post" id="what-is-ucp" href="blog-what-is-ucp.html">
       <span class="cat">Protocols</span>
       <h2>UCP: how Goofre&trade; scores agentic-commerce readiness</h2>
       <p><strong>UCP is Goofre&trade;'s readiness model</strong>, not another external standard to chase. It
@@ -152,9 +155,9 @@
       layers of readiness, why a transactability-weighted score runs tougher than a free checker, and how
       an <strong>Agentic Commerce Orchestrator&trade;</strong> uses it to close gaps in priority order.</p>
       <span class="meta">6 min read · Protocols</span>
-    </article>
+    </a>
 
-    <article class="post" id="aco-is-the-fde-of-ecommerce">
+    <a class="post" id="aco-is-the-fde-of-ecommerce" href="blog-aco-is-the-fde-of-ecommerce.html">
       <span class="cat">Careers</span>
       <h2>The ACO&trade; is e-commerce's Forward Deployed Engineer</h2>
       <p>In modern software, the <strong>Forward Deployed Engineer (FDE)</strong> is the highest-leverage
@@ -165,9 +168,9 @@
       This post makes the case for ACO&trade; as a career, and how the FDE playbook maps onto agentic
       commerce work.</p>
       <span class="meta">6 min read · Careers</span>
-    </article>
+    </a>
 
-    <article class="post" id="agentic-commerce-by-the-numbers">
+    <a class="post" id="agentic-commerce-by-the-numbers" href="blog-agentic-commerce-by-the-numbers.html">
       <span class="cat">Market data</span>
       <h2>Agentic commerce by the numbers (2026)</h2>
       <p>The trend is not hypothetical. AI-driven referral traffic to retail sites has grown by
@@ -177,9 +180,9 @@
       and spend, and reads the trend line for what it means for merchants and the developers who serve
       them. Data first, hype second.</p>
       <span class="meta">5 min read · Market data</span>
-    </article>
+    </a>
 
-    <article class="post" id="magento-agentic-readiness">
+    <a class="post" id="magento-agentic-readiness" href="blog-magento-agentic-readiness.html">
       <span class="cat">Magento</span>
       <h2>Is your Magento store invisible to AI shoppers?</h2>
       <p>Goofre&trade; is focused on <strong>Magento</strong> first, and Magento stores have specific,
@@ -189,7 +192,7 @@
       checklist an agent cares about (structured data, Merchant Center feeds, verified identity, quotable
       return and shipping terms, an agent-drivable checkout) and the fixes most stores miss.</p>
       <span class="meta">9 min read · Magento</span>
-    </article>
+    </a>
 
   </div>
 

@@ -1,0 +1,149 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>What Is Agentic Commerce? A Field Guide for E-commerce Developers | Goofre™</title>
+<meta name="description" content="Agentic commerce is shopping done by AI agents on a person's behalf. A plain-English field guide for e-commerce developers: how AI shopping agents read a store, why most stores are invisible to them, and where the new billable work lives.">
+<link rel="canonical" href="https://goofre.com/blog/what-is-agentic-commerce">
+<meta property="og:type" content="article">
+<meta property="og:title" content="What Is Agentic Commerce? A Field Guide for E-commerce Developers">
+<meta property="og:description" content="How AI shopping agents read a store, why most stores are invisible to them, and what agentic commerce changes for the people who build and run e-commerce stores.">
+<meta property="og:url" content="https://goofre.com/blog/what-is-agentic-commerce">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="blog-article.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "What is agentic commerce? A field guide for e-commerce developers",
+  "description": "Agentic commerce is shopping done by AI agents on a person's behalf. How AI shopping agents read a store, why most stores are invisible to them, and where the new billable work lives.",
+  "mainEntityOfPage": "https://goofre.com/blog/what-is-agentic-commerce",
+  "keywords": "agentic commerce, AI shopping agents, e-commerce developers, agentic data search, ChatGPT shopping, Magento AI readiness, Agentic Commerce Orchestrator",
+  "articleSection": "Foundations",
+  "author": { "@type": "Organization", "name": "Goofre" },
+  "publisher": { "@type": "Organization", "name": "Goofre", "url": "https://goofre.com" }
+}
+</script>
+
+<header class="site">
+  <div class="shell">
+    <a class="wordmark" href="index.html">Goofre&trade;<small>Agentic Commerce Orchestrator&trade;</small></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="index.html#platform">The platform</a>
+      <a class="cta" href="index.html#apply">Join as an ACO&trade;</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell">
+  <article class="article">
+    <p class="crumb"><a href="index.html">Home</a> / <a href="blog.html">Blog</a> / What is agentic commerce</p>
+    <span class="cat">Foundations</span>
+    <h1>What is agentic commerce? A field guide for e-commerce developers</h1>
+    <p class="meta">8 min read · Foundations · Updated 2026</p>
+
+    <p class="lede">Agentic commerce is shopping done by AI agents on a person's behalf. Instead of a
+    human opening ten tabs, a shopper asks an assistant, and the assistant does the searching, the
+    comparing and the buying. For the people who build and run e-commerce stores, this is the biggest
+    shift since mobile, and it changes what your storefront is for.</p>
+
+    <p>If you have spent a career making stores that look good and convert humans, the ground is moving.
+    The visitor deciding whether to buy is increasingly a piece of software. It does not scroll, it does
+    not squint at a hero image, and it does not give your brand the benefit of the doubt. It reads what
+    your store publishes, and if it cannot read something, for the agent that thing does not exist. This
+    guide explains how <strong>agentic commerce</strong> actually works, how an AI agent reads a store,
+    why most stores are invisible to it today, and where the new billable work is going to come from.</p>
+
+    <h2>From visual search to agentic data search</h2>
+    <p>For twenty years, e-commerce optimised for a human eye and a search engine crawler. You wrote
+    copy, tuned page speed, earned links, and hoped to rank in a list of blue links a person would click.
+    <strong>AI shopping agents</strong> like ChatGPT, Perplexity, Google's AI Mode and Amazon's Rufus
+    collapse that funnel. The shopper states an intent in plain language, and the agent returns a decision,
+    not a page of ten options to browse.</p>
+    <p>This is the move from visual search to <strong>agentic data search</strong>. The agent is not
+    trying to enjoy your website. It is trying to answer a question: can I find a product that matches,
+    confirm it is in stock, confirm the price and delivery, trust the merchant, and complete the purchase
+    right now? Every one of those is a data question. The store that answers all of them wins the sale.
+    The store that answers most of them, but cannot confirm returns or cannot be checked out by a machine,
+    gets skipped silently. There is no page two for the shopper to find you on.</p>
+
+    <h2>How an AI agent actually reads your store</h2>
+    <p>It helps to think about readiness as a stack of questions an agent asks, in order. Goofre™ groups
+    them into five layers, and each one gates the next.</p>
+    <ul>
+      <li><strong>Access.</strong> Can the agent reach your content at all? AI crawlers such as GPTBot and
+      PerplexityBot need to be allowed, and your data needs to be retrievable rather than locked behind
+      scripts the agent will not run.</li>
+      <li><strong>Comprehension.</strong> Can it understand what it reached? This is structured data:
+      Product, Offer, price, availability, and clean product feeds. Markup a human never sees is exactly
+      what the machine reads first.</li>
+      <li><strong>Identity and trust.</strong> Can the agent trust you enough to transact? Verified
+      business identity, consistent signals across the web, and machine-readable policies.</li>
+      <li><strong>Transactability.</strong> Can it actually buy? Quotable return and shipping terms, and a
+      checkout an agent can drive without a human clicking through modals.</li>
+      <li><strong>Reliability.</strong> Does it stay true over time? Stock and price that match reality,
+      so an agent that recommended you once is not embarrassed the next time.</li>
+    </ul>
+    <p>Fail an early layer and everything above it stops mattering. A store an agent cannot verify does
+    not get to be bought from, no matter how good the product photography is.</p>
+
+    <h2>Why most stores are invisible to agents today</h2>
+    <p>Here is the uncomfortable part. Most stores that invest heavily in being <em>mentioned</em> by AI
+    have never measured whether they are <em>buyable</em> by AI. Search engine optimisation, and its new
+    coat of paint, answer engine optimisation, get your store talked about. They cover roughly the first
+    two layers above. They do nothing for identity, transactability or reliability.</p>
+    <p>The failures are rarely dramatic. They are a missing availability value, a return policy that lives
+    only in a PDF, a price in the page that disagrees with the price in the feed, an identity an agent
+    cannot confirm. Each one looks fine to a human and fails silently for a machine. Multiply that across
+    a catalogue and a store that a person would happily buy from becomes one an agent quietly passes over.</p>
+
+    <blockquote>Being mentioned by AI is marketing. Being buyable by AI is revenue.</blockquote>
+
+    <h2>What this means for e-commerce developers</h2>
+    <p>Two forces are squeezing the traditional e-commerce developer at the same time. On one side, the
+    storefront you perfected is becoming a data source for agents rather than a destination for humans. On
+    the other, platforms are automating the work that used to be billable: theme tweaks, basic feed setup,
+    routine SEO. Squeezed from both sides, the role is not dying. It is moving up the stack.</p>
+    <p>The new high-leverage work is making a store readable, trusted and buyable by agents, and keeping it
+    that way as the standards move. That is a real discipline with real depth, closer to a surgeon's work
+    than to a plugin install, and it is exactly what a <strong>Agentic Commerce Orchestrator&trade;
+    (ACO&trade;)</strong> does. Goofre™ is the platform that turns e-commerce developers into ACO&trade;s,
+    starting with <a href="blog-magento-agentic-readiness.html">Magento stores</a>.</p>
+
+    <div class="takeaways">
+      <h3>Key takeaways</h3>
+      <ul>
+        <li>Agentic commerce is AI agents searching, comparing and buying on a shopper's behalf.</li>
+        <li>Agents read data, not design: your storefront becomes a data source.</li>
+        <li>Readiness is a stack: access, comprehension, identity, transactability, reliability.</li>
+        <li>SEO and AEO cover only the first two layers. The sale happens below them.</li>
+        <li>The work is moving up the stack, into the Agentic Commerce Orchestrator&trade; role.</li>
+      </ul>
+    </div>
+
+    <div class="article-cta">
+      <h3>Want to own this layer in your market?</h3>
+      <p>Goofre™ turns e-commerce developers into Agentic Commerce Orchestrators&trade;, the professionals
+      who run commerce in the agent era.</p>
+      <a class="cta" href="index.html#apply">Join as an ACO&trade; &rarr;</a>
+    </div>
+
+    <div class="related">
+      <h4>Keep reading</h4>
+      <a href="blog-acp-ap2-mcp-explained.html">ACP, AP2 and MCP, explained simply &rarr;</a>
+      <a href="blog-aco-is-the-fde-of-ecommerce.html">The ACO&trade; is e-commerce's Forward Deployed Engineer &rarr;</a>
+    </div>
+  </article>
+</main>
+
+<footer class="site">
+  <div class="shell">
+    <span>© 2026 Goofre. "Agentic Commerce Orchestrator™" and "ACO™" are trademarks of Goofre™.</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="blog.html">The field guide</a>
+      <a href="index.html#apply">Join as an ACO&trade;</a>
+    </nav>
+  </div>
+</footer>
