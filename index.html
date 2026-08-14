@@ -266,6 +266,20 @@
   .model-step h3 { margin: .7rem 0 .4rem; font-size: 1rem; }
   .model-step p { font-size: .88rem; margin: 0; }
 
+  /* ── Blog / field-guide tiles ─────────────────────────────────────── */
+  .posts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 1.8rem 0 0; }
+  .post { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--rule);
+    border-radius: 10px; padding: 1.5rem 1.45rem; text-decoration: none;
+    transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease; }
+  .post:hover { border-color: var(--accent); box-shadow: 0 14px 30px -20px rgba(4,120,87,.55); transform: translateY(-2px); }
+  .post .cat { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); margin-bottom: .7rem; }
+  .post h3 { font-size: 1.04rem; margin: 0 0 .5rem; color: var(--ink); line-height: 1.32; }
+  .post p { font-size: .88rem; color: var(--ink-2); margin: 0 0 1.1rem; }
+  .post .meta { margin-top: auto; font-size: .74rem; color: var(--ink-3); font-weight: 600; }
+  .posts-more { display: inline-flex; margin-top: 1.6rem; }
+  @media (max-width: 840px){ .posts { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px){ .posts { grid-template-columns: 1fr; } }
+
   .partner { background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 2.2rem; margin-top: 4.5rem; }
   .partner .grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 2.2rem; align-items: center; }
   .partner .founding { font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: var(--warn); font-weight: 700; }
@@ -809,6 +823,62 @@
       <p class="apply-note">Reviewed by a human · reply within 3 working days</p>
     </form>
   </section>
+
+  <!-- ══════════════════ 08 · THE FIELD GUIDE (BLOG) ══════════════════ -->
+  <section id="blog">
+    <p class="eyebrow">08 · The field guide</p>
+    <h2>Learn the agent era. Written for developers.</h2>
+    <p style="max-width:62ch;">
+      Plain-English explainers on agentic commerce, the protocol stack (ACP, AP2 and MCP), real
+      market data, and why the Agentic Commerce Orchestrator™ is the role for e-commerce developers
+      to own next. Written for the people who build and run Magento stores.
+    </p>
+    <div class="posts">
+      <a class="post" href="blog.html#what-is-agentic-commerce">
+        <span class="cat">Foundations</span>
+        <h3>What is agentic commerce? A field guide for e-commerce developers</h3>
+        <p>AI agents now search, compare and buy on a shopper's behalf. How agentic commerce works,
+        why the storefront becomes a data source, and what it changes for the people who build stores.</p>
+        <span class="meta">8 min read · Foundations</span>
+      </a>
+      <a class="post" href="blog.html#acp-ap2-mcp-explained">
+        <span class="cat">Protocols</span>
+        <h3>ACP, AP2 and MCP, explained simply</h3>
+        <p>The three open standards behind agent checkout, agent payments and agent access, in plain
+        English, with exactly what each one asks of your e-commerce store.</p>
+        <span class="meta">7 min read · Protocols</span>
+      </a>
+      <a class="post" href="blog.html#what-is-ucp">
+        <span class="cat">Protocols</span>
+        <h3>UCP: how Goofre scores agentic-commerce readiness</h3>
+        <p>UCP is Goofre™'s readiness model. How it maps a store to ACP, AP2 and MCP and turns
+        &ldquo;are we AI-ready?&rdquo; into a graded, fixable score.</p>
+        <span class="meta">6 min read · Protocols</span>
+      </a>
+      <a class="post" href="blog.html#aco-is-the-fde-of-ecommerce">
+        <span class="cat">Careers</span>
+        <h3>The ACO™ is e-commerce's Forward Deployed Engineer</h3>
+        <p>Why the Agentic Commerce Orchestrator™ is the FDE moment for store developers: the
+        highest-leverage new role as platforms automate the old billable work.</p>
+        <span class="meta">6 min read · Careers</span>
+      </a>
+      <a class="post" href="blog.html#agentic-commerce-by-the-numbers">
+        <span class="cat">Market data</span>
+        <h3>Agentic commerce by the numbers (2026)</h3>
+        <p>Real, sourced data on AI-driven shopping traffic, conversion and spend, and what the trend
+        line means for merchants and the developers who serve them.</p>
+        <span class="meta">5 min read · Market data</span>
+      </a>
+      <a class="post" href="blog.html#magento-agentic-readiness">
+        <span class="cat">Magento</span>
+        <h3>Is your Magento store invisible to AI shoppers?</h3>
+        <p>A practical, Magento-specific look at the markup, feeds, identity and checkout signals an AI
+        agent reads before it will buy, and the gaps most stores miss.</p>
+        <span class="meta">9 min read · Magento</span>
+      </a>
+    </div>
+    <a class="cta ghost posts-more" href="blog.html">Read the full blog →</a>
+  </section>
 </div>
 
 <!-- ══════════════════ FOOTER / SITEMAP ══════════════════ -->
@@ -836,7 +906,7 @@
       <div class="foot-col">
         <h4>Company</h4>
         <a href="#TODO-about">About</a>
-        <a href="#TODO-blog">Blog</a>
+        <a href="blog.html">Blog · the field guide</a>
         <a href="#TODO-contact">Contact</a>
         <a href="https://reachviveksai-cloud.github.io/logicrays-landing/">Merchant service (Logic Rays)</a>
       </div>

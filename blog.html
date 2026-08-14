@@ -1,0 +1,214 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Goofre™ Blog — Agentic Commerce for E-commerce Developers | ACP, AP2, MCP, UCP explained</title>
+<meta name="description" content="The Goofre field guide: plain-English explainers on agentic commerce for e-commerce developers. Understand the protocol stack (ACP, AP2, MCP), Goofre's UCP readiness model, real market data, Magento AI readiness, and why the Agentic Commerce Orchestrator (ACO) is the role to own next.">
+<link rel="canonical" href="https://goofre.com/blog">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Goofre™ Blog — Agentic Commerce for E-commerce Developers">
+<meta property="og:description" content="Plain-English explainers on agentic commerce, the ACP / AP2 / MCP protocol stack, Goofre's UCP readiness model, real market data, and the Agentic Commerce Orchestrator (ACO) role.">
+<meta property="og:url" content="https://goofre.com/blog">
+<meta name="twitter:card" content="summary_large_image">
+
+<!--
+  Goofre developer blog — index / field guide.
+  Entries are keyword-rich summaries (teasers). Full article bodies are a content
+  follow-up; each <article id> is the anchor the landing-page tiles deep-link to.
+  Magento-first framing; open-source-era "Goofre OS / UCP deck" language retired.
+-->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Goofre Blog — The field guide",
+  "description": "Explainers on agentic commerce for e-commerce developers: the ACP, AP2 and MCP protocol stack, Goofre's UCP readiness model, market data, Magento AI readiness, and the Agentic Commerce Orchestrator (ACO) role.",
+  "url": "https://goofre.com/blog",
+  "publisher": { "@type": "Organization", "name": "Goofre", "url": "https://goofre.com" },
+  "blogPost": [
+    { "@type": "BlogPosting", "headline": "What is agentic commerce? A field guide for e-commerce developers", "url": "https://goofre.com/blog#what-is-agentic-commerce", "keywords": "agentic commerce, AI shopping agents, e-commerce developers, agentic data search" },
+    { "@type": "BlogPosting", "headline": "ACP, AP2 and MCP, explained simply", "url": "https://goofre.com/blog#acp-ap2-mcp-explained", "keywords": "Agentic Commerce Protocol, ACP, Agent Payments Protocol, AP2, Model Context Protocol, MCP, agent checkout" },
+    { "@type": "BlogPosting", "headline": "UCP: how Goofre scores agentic-commerce readiness", "url": "https://goofre.com/blog#what-is-ucp", "keywords": "UCP, agentic commerce readiness, Goofre readiness engine, structured data, ACP AP2 MCP mapping" },
+    { "@type": "BlogPosting", "headline": "The ACO is e-commerce's Forward Deployed Engineer", "url": "https://goofre.com/blog#aco-is-the-fde-of-ecommerce", "keywords": "Agentic Commerce Orchestrator, ACO, Forward Deployed Engineer, FDE, e-commerce developer career" },
+    { "@type": "BlogPosting", "headline": "Agentic commerce by the numbers (2026)", "url": "https://goofre.com/blog#agentic-commerce-by-the-numbers", "keywords": "agentic commerce statistics, AI shopping data 2026, AI traffic conversion, ChatGPT checkout" },
+    { "@type": "BlogPosting", "headline": "Is your Magento store invisible to AI shoppers?", "url": "https://goofre.com/blog#magento-agentic-readiness", "keywords": "Magento agentic commerce, Magento AI readiness, product feed, structured data, agent checkout" }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --ground:#F7F8F9; --surface:#FFFFFF; --ink:#1A1F26; --ink-2:#46505B; --ink-3:#6E7780;
+    --rule:#E2E5E9; --rule-2:#EDEFF2; --accent:#047857; --accent-hover:#065F46; --tint:#E9F4EF; --warn:#92600A;
+    --font-sans:"Helvetica Neue", Helvetica, Arial, "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin:0; background:var(--ground); color:var(--ink-2); font-family:var(--font-sans);
+    font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; }
+  .shell { max-width:1120px; margin:0 auto; padding:0 1.5rem; }
+  a { color:var(--accent); }
+  article[id], section[id] { scroll-margin-top: 92px; }
+
+  header.site { background:rgba(255,255,255,.92); -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:50; }
+  header.site .shell { display:flex; align-items:center; justify-content:space-between; gap:.5rem 1.2rem; padding:.95rem 1.5rem; }
+  .wordmark { font-weight:700; letter-spacing:-.015em; font-size:1.15rem; color:var(--ink); text-decoration:none; }
+  .wordmark small { font-size:.6rem; letter-spacing:.11em; text-transform:uppercase; color:var(--ink-3); display:block; margin-top:.1rem; font-weight:600; }
+  .nav { display:flex; gap:1.4rem; align-items:center; font-size:.9rem; }
+  .nav a { color:var(--ink-2); text-decoration:none; font-weight:500; }
+  .nav a:hover { color:var(--ink); }
+  .cta { display:inline-flex; align-items:center; gap:.4rem; background:var(--accent); color:#fff !important;
+    text-decoration:none; font-weight:600; font-size:.88rem; padding:.5rem 1rem; border-radius:6px; }
+  .cta:hover { background:var(--accent-hover); }
+
+  .hero { padding:3.4rem 0 1.4rem; }
+  .eyebrow { font-size:.72rem; letter-spacing:.13em; text-transform:uppercase; color:var(--ink-3); font-weight:700; margin:0 0 .9rem; }
+  h1 { font-size:2.5rem; line-height:1.05; font-weight:700; margin:0 0 1rem; color:var(--ink); letter-spacing:-.02em; max-width:20ch; text-wrap:balance; }
+  .lede { font-size:1.08rem; max-width:64ch; }
+  .kw { color:var(--ink-3); font-size:.82rem; margin-top:1rem; }
+
+  .posts { display:grid; grid-template-columns:repeat(2,1fr); gap:1.3rem; padding:1.2rem 0 3rem; }
+  .post { display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--rule);
+    border-radius:12px; padding:1.9rem 1.9rem; }
+  .post .cat { font-size:.68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:.7rem; }
+  .post h2 { font-size:1.32rem; line-height:1.24; margin:0 0 .7rem; color:var(--ink); letter-spacing:-.01em; }
+  .post p { font-size:.94rem; color:var(--ink-2); margin:0 0 1rem; }
+  .post .meta { margin-top:auto; font-size:.75rem; color:var(--ink-3); font-weight:600; padding-top:.6rem; border-top:1px solid var(--rule-2); }
+  .post strong { color:var(--ink); }
+
+  .endcta { background:var(--tint); border:1px solid var(--rule); border-radius:14px; padding:2.2rem;
+    text-align:center; margin:0 0 3.4rem; }
+  .endcta h2 { margin:0 0 .5rem; color:var(--ink); font-size:1.4rem; }
+  .endcta p { margin:0 0 1.2rem; max-width:52ch; margin-left:auto; margin-right:auto; }
+
+  footer.site { background:var(--surface); border-top:1px solid var(--rule); }
+  footer.site .shell { display:flex; flex-wrap:wrap; gap:.5rem 2rem; justify-content:space-between;
+    padding:1.6rem 1.5rem; font-size:.8rem; color:var(--ink-3); }
+  footer .nav a { font-weight:500; }
+
+  @media (max-width:760px){ h1 { font-size:2rem; } .posts { grid-template-columns:1fr; } .nav a:not(.cta){ display:none; } }
+</style>
+
+<header class="site">
+  <div class="shell">
+    <a class="wordmark" href="index.html">Goofre&trade;<small>Agentic Commerce Orchestrator&trade;</small></a>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#platform">The platform</a>
+      <a class="cta" href="index.html#apply">Join as an ACO&trade;</a>
+    </nav>
+  </div>
+</header>
+
+<main class="shell">
+  <section class="hero">
+    <p class="eyebrow">Goofre&trade; · The field guide</p>
+    <h1>Agentic commerce, explained for the people who build stores.</h1>
+    <p class="lede">
+      Plain-English explainers on agentic commerce for e-commerce developers: the protocol stack
+      (<strong>ACP</strong>, <strong>AP2</strong>, <strong>MCP</strong>), Goofre&trade;'s
+      <strong>UCP</strong> readiness model, real market data, Magento AI readiness, and why the
+      <strong>Agentic Commerce Orchestrator&trade; (ACO&trade;)</strong> is the role to own next.
+    </p>
+    <p class="kw">Topics: agentic commerce · AI shopping agents · Agentic Commerce Protocol (ACP) · Agent Payments Protocol (AP2) · Model Context Protocol (MCP) · Magento AI readiness · ACO&trade; careers</p>
+  </section>
+
+  <div class="posts">
+
+    <article class="post" id="what-is-agentic-commerce">
+      <span class="cat">Foundations</span>
+      <h2>What is agentic commerce? A field guide for e-commerce developers</h2>
+      <p><strong>Agentic commerce</strong> is shopping done by AI agents on a person's behalf. Instead of
+      a human browsing a storefront, an assistant like ChatGPT, Perplexity or Gemini searches, compares
+      stores, verifies stock, delivery and return terms, and completes the purchase. For developers this
+      is the shift from <strong>visual search to agentic data search</strong>: the storefront you have
+      spent a career perfecting becomes a data source, and the visitor deciding whether to buy is
+      increasingly a piece of software. This guide covers how agents read a store, why most stores are
+      invisible to them, and where the new billable work lives.</p>
+      <span class="meta">8 min read · Foundations</span>
+    </article>
+
+    <article class="post" id="acp-ap2-mcp-explained">
+      <span class="cat">Protocols</span>
+      <h2>ACP, AP2 and MCP, explained simply</h2>
+      <p>Three open standards now define agentic commerce, and every e-commerce developer should be able
+      to name them. The <strong>Agentic Commerce Protocol (ACP)</strong> from OpenAI and Stripe governs how
+      an agent completes a purchase (it powers checkout inside ChatGPT). The <strong>Agent Payments
+      Protocol (AP2)</strong> from Google and 60+ payment networks governs trusted, authorised
+      machine-initiated payments. The <strong>Model Context Protocol (MCP)</strong> from Anthropic governs
+      how an agent reaches and reads your store's data and tools. We map each to what it asks of your
+      store, in plain English, with no standards-body jargon.</p>
+      <span class="meta">7 min read · Protocols</span>
+    </article>
+
+    <article class="post" id="what-is-ucp">
+      <span class="cat">Protocols</span>
+      <h2>UCP: how Goofre&trade; scores agentic-commerce readiness</h2>
+      <p><strong>UCP is Goofre&trade;'s readiness model</strong>, not another external standard to chase. It
+      takes the vague question &ldquo;is our store AI-ready?&rdquo; and turns it into a graded, fixable
+      score by measuring your store against the standards agents actually use (ACP, AP2, MCP) and the
+      structured-data foundations beneath them. This post explains how UCP maps a store across five
+      layers of readiness, why a transactability-weighted score runs tougher than a free checker, and how
+      an <strong>Agentic Commerce Orchestrator&trade;</strong> uses it to close gaps in priority order.</p>
+      <span class="meta">6 min read · Protocols</span>
+    </article>
+
+    <article class="post" id="aco-is-the-fde-of-ecommerce">
+      <span class="cat">Careers</span>
+      <h2>The ACO&trade; is e-commerce's Forward Deployed Engineer</h2>
+      <p>In modern software, the <strong>Forward Deployed Engineer (FDE)</strong> is the highest-leverage
+      role: a technical person embedded with a customer to make powerful technology actually work in their
+      environment. The <strong>Agentic Commerce Orchestrator&trade; (ACO&trade;)</strong> is that role for
+      e-commerce. As platforms automate the old billable work (theme tweaks, feed fixes, basic SEO), the
+      developers who move up the stack (owning a store's readiness for AI agents) become indispensable.
+      This post makes the case for ACO&trade; as a career, and how the FDE playbook maps onto agentic
+      commerce work.</p>
+      <span class="meta">6 min read · Careers</span>
+    </article>
+
+    <article class="post" id="agentic-commerce-by-the-numbers">
+      <span class="cat">Market data</span>
+      <h2>Agentic commerce by the numbers (2026)</h2>
+      <p>The trend is not hypothetical. AI-driven referral traffic to retail sites has grown by
+      triple-digit percentages year over year, AI-referred shoppers convert at materially higher rates,
+      and AI assistants already recommend specific products and complete purchases. This post pulls the
+      real, sourced numbers on <strong>agentic commerce</strong> adoption, AI shopping traffic, conversion
+      and spend, and reads the trend line for what it means for merchants and the developers who serve
+      them. Data first, hype second.</p>
+      <span class="meta">5 min read · Market data</span>
+    </article>
+
+    <article class="post" id="magento-agentic-readiness">
+      <span class="cat">Magento</span>
+      <h2>Is your Magento store invisible to AI shoppers?</h2>
+      <p>Goofre&trade; is focused on <strong>Magento</strong> first, and Magento stores have specific,
+      recurring gaps. An AI agent reads product markup, feeds, identity signals, policy pages and the
+      checkout path before it will buy, and one wrong value can make a store look fine to a human and fail
+      silently for an agent. This practical guide walks the <strong>Magento AI readiness</strong>
+      checklist an agent cares about (structured data, Merchant Center feeds, verified identity, quotable
+      return and shipping terms, an agent-drivable checkout) and the fixes most stores miss.</p>
+      <span class="meta">9 min read · Magento</span>
+    </article>
+
+  </div>
+
+  <div class="endcta">
+    <h2>Want to do this work for a living?</h2>
+    <p>Goofre&trade; turns e-commerce developers into Agentic Commerce Orchestrators&trade; — the
+    professionals who run commerce in the agent era.</p>
+    <a class="cta" href="index.html#apply">Join as an ACO&trade; →</a>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="shell">
+    <span>© 2026 Goofre. "Agentic Commerce Orchestrator™" and "ACO™" are trademarks of Goofre™.</span>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#platform">The platform</a>
+      <a href="index.html#blog">The field guide</a>
+      <a href="https://reachviveksai-cloud.github.io/logicrays-landing/">Merchant service</a>
+    </nav>
+  </div>
+</footer>
